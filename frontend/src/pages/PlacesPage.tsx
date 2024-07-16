@@ -2,12 +2,12 @@ import { useEffect, useState } from "react";
 import { getPlaces, PlaceData } from "../API/places";
 import "../styles/output.css";
 import SearchBar from "../components/core/SearchBar";
-import { Pagination } from "@mui/material";
+import Pagination from "../components/core/PaginationComponent";
 import PlacesCard from "../components/Places/PlacesCard";
 import Header from "../components/core/Header";
 import Footer from "../components/core/Footer";
 
-function PlacesPages() {
+const PlacesPages = () => {
   const [places, setPlaces] = useState<PlaceData[] | null>(null);
 
   useEffect(() => {
@@ -38,10 +38,14 @@ function PlacesPages() {
       </div>
       {places && <PlacesCard data={places[0]}></PlacesCard>}
       {!places && <h1>No Items!</h1>}
-      <Pagination></Pagination>
+      <Pagination
+        totalPages={places ? places.length : 0}
+        currentPage={0}
+        onPageChange={() => {}}
+      ></Pagination>
       <Footer bg="gray-100"></Footer>
     </main>
   );
-}
+};
 
 export default PlacesPages;
