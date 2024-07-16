@@ -1,0 +1,4 @@
+/* prevents overscrolling */
+body {
+  overscroll-behavior-y: none;
+}
