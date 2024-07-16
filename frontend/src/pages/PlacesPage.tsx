@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { getPlaces, PlaceData } from "../API/places";
 import "../styles/output.css";
-import SearchBar from "../components/common/SearchBar";
+import SearchBar from "../components/core/SearchBar";
 import { Pagination } from "@mui/material";
 import PlacesCard from "../components/Places/PlacesCard";
 import Header from "../components/core/Header";
