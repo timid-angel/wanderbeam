@@ -46,10 +46,10 @@
   flex-wrap: wrap;
   width: 90%;
   gap: 20px;
-  justify-content: center;
+  justify-content: space-between;
   margin: 30px auto 50px;
 }
 
-.lodging-container{
+.lodging-container {
   margin-bottom: 50px;
 }

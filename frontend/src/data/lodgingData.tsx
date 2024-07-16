@@ -1,12 +1,12 @@
-import continental from "../assets/continental.webp";
-import sunrise from "../assets/sunrise.webp";
-import oceanBreeze from "../assets/ocean-breeze.jpg";
-import cityCentral from "../assets/city-central.jpg";
-import countryLodge from "../assets/country-lodge.jpg";
-import lakeVIew from "../assets/lake-view.jpg";
-import skyline from "../assets/skyline.jpg";
-import forstRetreat from "../assets/forest.jpg";
-import desertOasis from "../assets/desert.jpg";
+import continental from "../assets/continent.jpg";
+import sunrise from "../assets/sun.jpg";
+import oceanBreeze from "../assets/ocean.jpg";
+import cityCentral from "../assets/city.jpg";
+import countryLodge from "../assets/country.jpg";
+import lakeVIew from "../assets/lake.jpg";
+import skyline from "../assets/sky-line.jpg";
+import forstRetreat from "../assets/forest-retreat.jpg";
+import desertOasis from "../assets/desert-oasis.webp";
 
 interface LodgingInfo {
   name: string;
@@ -16,7 +16,7 @@ interface LodgingInfo {
   location: string;
   qualityRating: number;
   userRating: number;
-  image: any
+  image: string;
 }
 
 const lodgingInfos: Array<LodgingInfo> = [
