@@ -6,17 +6,18 @@ const Footer = () => {
   return <footer>
     
     <div className='footer-links'>
-        <p>About  |</p>
-        <p>Team  |</p>
-        <p>FAQ's</p>
+        <a href=''>About  |</a>
+        <a href=''>Team  |</a>
+        <a href=''>FAQ's</a>
     </div>
     <img className='logo' src={logo} alt='logo'/>
     <div className='socialmedia-container'>
         <div className='social-media'>
-            <LinkedIn/>
-            <Twitter/>
-            <Facebook/>
-            <Instagram/>
+            <a href=''><LinkedIn/></a>
+            <a href=''><Twitter/></a> 
+            <a href=''><Facebook/></a> 
+            <a href=''><Instagram/></a>
+           
             
         </div>
         <div>
