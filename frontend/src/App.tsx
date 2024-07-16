@@ -1,9 +1,9 @@
-import LodgingPage from "./pages/LodgingPage";
+import HomePage from "./pages/HomePage";
 
 const App = () => {
   return (
     <>
-      <LodgingPage />
+      <HomePage />
     </>
   );
 };

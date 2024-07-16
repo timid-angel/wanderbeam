@@ -2,97 +2,98 @@ import { Button, Chip } from "@mui/material";
 import { useState } from "react";
 import Header from "../components/core/Header";
 import Footer from "../components/core/Footer";
-import SearchComponent from "../components/core/SearchComponent";
+import SearchBar from "../components/core/SearchBar";
 import ActivityCard from "../components/activities/ActivityCard";
 import PaginationComponent from "../components/core/PaginationComponent";
 import Filter from "../components/core/Filter";
+
 const activitiesData = [
-    { 
-      name: "Swimming at the Beach", 
-      category: "Swimming", 
-      description: "July 23 - July 28",
-      image: "activities/activity10.jpg"
-    },
-    { 
-      name: "Live Concert", 
-      category: "Concerts", 
-      description: "July 24 - July 29",
-      image: "activities/activity1.jpg"
-    },
-    { 
-      name: "Mountain Hiking", 
-      category: "Hiking", 
-      description: "July 25 - July 30",
-      image: "activities/activity5.jpg"
-    },
-    { 
-      name: "Camping in the Woods", 
-      category: "Camping", 
-      description: "July 26 - July 31",
-      image: "activities/activity3.jpg"
-    },
-    { 
-      name: "Live Concert", 
-      category: "Concerts", 
-      description: "July 27 - August 1",
-      image: "activities/activity4.jpg"
-    },
-    { 
-      name: "Museum Visit", 
-      category: "Visit", 
-      description: "July 28 - August 2",
-      image: "activities/activity8.jpg"
-    },
-    { 
-      name: "Mountain Hiking", 
-      category: "Hiking", 
-      description: "July 29 - August 3",
-      image: "activities/activit.jpg"
-    },
-    { 
-      name: "Swimming at the Beach", 
-      category: "Swimming", 
-      description: "July 30 - August 4",
-      image: "activities/activity10.jpg"
-    },
-    { 
-      name: "Live Concert", 
-      category: "Concerts", 
-      description: "July 31 - August 5",
-      image: "activities/activity1.jpg"
-    },
-    { 
-      name: "Mountain Hiking", 
-      category: "Hiking", 
-      description: "August 1 - August 6",
-      image: "activities/activity5.jpg"
-    },
-    { 
-      name: "Camping in the Woods", 
-      category: "Camping", 
-      description: "August 2 - August 7",
-      image: "activities/activity3.jpg"
-    },
-    { 
-      name: "Live Concert", 
-      category: "Concerts", 
-      description: "August 3 - August 8",
-      image: "activities/activity4.jpg"
-    },
-    { 
-      name: "Museum Visit", 
-      category: "Visit", 
-      description: "August 4 - August 9",
-      image: "activities/activity8.jpg"
-    },
-    { 
-      name: "Mountain Hiking", 
-      category: "Hiking", 
-      description: "August 5 - August 10",
-      image: "activities/activit.jpg"
-    }
-  ];
-  
+  {
+    name: "Swimming at the Beach",
+    category: "Swimming",
+    description: "July 23 - July 28",
+    image: "activities/activity10.jpg",
+  },
+  {
+    name: "Live Concert",
+    category: "Concerts",
+    description: "July 24 - July 29",
+    image: "activities/activity1.jpg",
+  },
+  {
+    name: "Mountain Hiking",
+    category: "Hiking",
+    description: "July 25 - July 30",
+    image: "activities/activity5.jpg",
+  },
+  {
+    name: "Camping in the Woods",
+    category: "Camping",
+    description: "July 26 - July 31",
+    image: "activities/activity3.jpg",
+  },
+  {
+    name: "Live Concert",
+    category: "Concerts",
+    description: "July 27 - August 1",
+    image: "activities/activity4.jpg",
+  },
+  {
+    name: "Museum Visit",
+    category: "Visit",
+    description: "July 28 - August 2",
+    image: "activities/activity8.jpg",
+  },
+  {
+    name: "Mountain Hiking",
+    category: "Hiking",
+    description: "July 29 - August 3",
+    image: "activities/activit.jpg",
+  },
+  {
+    name: "Swimming at the Beach",
+    category: "Swimming",
+    description: "July 30 - August 4",
+    image: "activities/activity10.jpg",
+  },
+  {
+    name: "Live Concert",
+    category: "Concerts",
+    description: "July 31 - August 5",
+    image: "activities/activity1.jpg",
+  },
+  {
+    name: "Mountain Hiking",
+    category: "Hiking",
+    description: "August 1 - August 6",
+    image: "activities/activity5.jpg",
+  },
+  {
+    name: "Camping in the Woods",
+    category: "Camping",
+    description: "August 2 - August 7",
+    image: "activities/activity3.jpg",
+  },
+  {
+    name: "Live Concert",
+    category: "Concerts",
+    description: "August 3 - August 8",
+    image: "activities/activity4.jpg",
+  },
+  {
+    name: "Museum Visit",
+    category: "Visit",
+    description: "August 4 - August 9",
+    image: "activities/activity8.jpg",
+  },
+  {
+    name: "Mountain Hiking",
+    category: "Hiking",
+    description: "August 5 - August 10",
+    image: "activities/activit.jpg",
+  },
+];
+
 const ActivitiesPage = () => {
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [current, setCurrent] = useState("");
@@ -110,7 +111,7 @@ const ActivitiesPage = () => {
       (hikingSelected && activity.category === "Hiking") ||
       (campingSelected && activity.category === "Camping") ||
       (concertsSelected && activity.category === "Concerts") ||
-      (visitSelected && activity.category === "Visit")
+      (visitSelected && activity.category === "Visit"),
   );
 
   if (
@@ -124,12 +125,12 @@ const ActivitiesPage = () => {
   }
 
   filteredActivities = filteredActivities.filter((activity) =>
-    activity.description.toLowerCase().includes(current.toLowerCase())
+    activity.description.toLowerCase().includes(current.toLowerCase()),
   );
 
   const currentPageActivities = filteredActivities.slice(
     (currentPage - 1) * 9,
-    currentPage * 9
+    currentPage * 9,
   );
 
   const totalPages = Math.ceil(filteredActivities.length / 9);
@@ -165,7 +166,7 @@ const ActivitiesPage = () => {
       <Header />
 
       <div className="activities-container">
-        <SearchComponent onSearch={handleSearch} />
+        <SearchBar onSearch={handleSearch} />
         <Filter onClick={toggleFilter} />
 
         {showFilter && (
@@ -211,7 +212,15 @@ const ActivitiesPage = () => {
         />
 
         {/* Centered Summary Button */}
-        <div style={{ display: "flex", justifyContent: "center", marginTop: "20px", marginRight:"60px" , marginBottom :"30px"}}>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            marginTop: "20px",
+            marginRight: "60px",
+            marginBottom: "30px",
+          }}
+        >
           <Button variant="contained" color="primary">
             Summary
           </Button>

@@ -4,12 +4,17 @@ import HistoryPage from "./pages/HistoryPage";
 import LodgingPage from "./pages/LodgingPage";
 import LodgingDetails from "./pages/LodgingDetails";
 import ActivitiesPage from "./pages/ActivitiesPage";
+import PlacesPage from "./pages/PlacesPage";
 import SummaryPage from "./pages/SummaryPage";
 
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <HomePage />,
+  },
+  {
+    path: "/places",
+    element: <PlacesPage />,
   },
   {
     path: "/history",
@@ -20,12 +25,12 @@ export const router = createBrowserRouter([
     element: <LodgingPage />,
   },
   {
-    path:"/activities",
-    element:<ActivitiesPage/>
+    path: "/activities",
+    element: <ActivitiesPage />,
   },
   {
     path: "/lodging/:name",
-    element: <LodgingDetails/>
+    element: <LodgingDetails />,
   },
   {
     path:"/summary",

@@ -7,7 +7,7 @@ import PaginationComponent from "../components/core/PaginationComponent";
 import lodgingInfos from "../data/lodgingData";
 import Header from "../components/core/Header";
 import Footer from "../components/core/Footer";
-import SearchComponent from "../components/core/SearchComponent";
+import SearchComponent from "../components/core/SearchBar";
 import Filter from "../components/core/Filter";
 import EmptyIndicator from "../components/core/EmptyIndicator";
 const LodgingPage = () => {
@@ -35,7 +35,7 @@ const LodgingPage = () => {
       (resortSelected && lodge.category === "Resort") ||
       (lodgeSelected && lodge.category === "Lodge") ||
       (retreatSelected && lodge.category === "Retreat") ||
-      (apartmentSelected && lodge.category === "Apartment")
+      (apartmentSelected && lodge.category === "Apartment"),
   );
 
   if (
@@ -53,33 +53,33 @@ const LodgingPage = () => {
   if (oneStar || twoStar || threeStar || fourStar || fiveStar) {
     if (oneStar) {
       filteredLodge = filteredLodge.filter(
-        (lodge) => lodge.qualityRating === 1
+        (lodge) => lodge.qualityRating === 1,
       );
     } else if (twoStar) {
       filteredLodge = filteredLodge.filter(
-        (lodge) => lodge.qualityRating === 2
+        (lodge) => lodge.qualityRating === 2,
       );
     } else if (threeStar) {
       filteredLodge = filteredLodge.filter(
-        (lodge) => lodge.qualityRating === 3
+        (lodge) => lodge.qualityRating === 3,
       );
     } else if (fourStar) {
       filteredLodge = filteredLodge.filter(
-        (lodge) => lodge.qualityRating === 4
+        (lodge) => lodge.qualityRating === 4,
       );
     } else {
       filteredLodge = filteredLodge.filter(
-        (lodge) => lodge.qualityRating === 5
+        (lodge) => lodge.qualityRating === 5,
       );
     }
   }
 
   filteredLodge = filteredLodge.filter((lodge) =>
-    lodge.description.toLowerCase().includes(current.toLowerCase())
+    lodge.description.toLowerCase().includes(current.toLowerCase()),
   );
   const currentPageLodge = filteredLodge.slice(
     (currentPage - 1) * 9,
-    currentPage * 9
+    currentPage * 9,
   );
   const totalPages = Math.ceil(filteredLodge.length / 9);
 
