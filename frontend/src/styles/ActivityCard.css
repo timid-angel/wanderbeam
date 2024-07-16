@@ -1,16 +1,7 @@
-body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f0f0f0;
-    margin: 0;
-}
-
+/* styles/ActivityCard.css */
 .card {
     position: relative;
-    width: 300px;
+    width: 350px;
     height: 400px;
     overflow: hidden;
     border-radius: 10px;
@@ -24,6 +15,7 @@ body {
 }
 
 .card .overlay {
+    
     position: absolute;
     top: 0;
     left: 0;
@@ -39,6 +31,7 @@ body {
     color: #fff;
     font-size: 24px;
     font-weight: bold;
+    justify-content: center;
 }
 
 .card .content {
@@ -47,4 +40,5 @@ body {
     left: 20px;
     color: #fff;
     font-size: 16px;
+    justify-self: center;
 }
