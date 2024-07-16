@@ -5,7 +5,6 @@ export interface FilterMap {
 }
 
 export interface PlaceData {
-  // Until the data needed is required
   location: string;
   image: string;
   hasHiking: boolean;
@@ -15,31 +14,26 @@ export interface PlaceData {
   hasZoo: boolean;
 }
 
-export function getPlaces(filters: FilterMap[] | null = []): PlaceData[] {
-  // Example return data matching the expected type
-  if (filters != null) {
-    return [
-      {
-        location: "Harar",
-        image: boat,
-        hasHiking: true,
-        hasSkiing: true,
-        hasMuseum: true,
-        hasFestival: true,
-        hasZoo: true,
-      },
-    ];
+// Helper function to generate a single PlaceData object
+const generatePlaceData = (index: number): PlaceData => {
+  return {
+    location: `Location ${index}`,
+    image: boat,
+    hasHiking: Math.random() > 0.1,
+    hasSkiing: Math.random() > 0.5,
+    hasMuseum: Math.random() > 0.2,
+    hasFestival: Math.random() > 0.5,
+    hasZoo: Math.random() > 0.3,
+  };
+};
+
+export const getPlaces = async (
+  filters: FilterMap[] | null = [],
+): PlaceData[] => {
+  const demoData: PlaceData[] = [];
+  for (let i = 0; i < 100; i++) {
+    demoData.push(generatePlaceData(i + 1));
   }
 
-  return [
-    {
-      location: "Harar",
-      image: boat,
-      hasHiking: true,
-      hasSkiing: true,
-      hasMuseum: true,
-      hasFestival: true,
-      hasZoo: true,
-    },
-  ];
-}
+  return demoData;
+};
