@@ -9,7 +9,7 @@ interface ActivityCardProps{
 
 
 
-const ActivityCard: React.FC<ActivityCardProps> = (props) => {
+const ActivityCard: React.FC<ActivityCardProps> = () => {
     return (
         <div className="card">
             <img src="https://via.placeholder.com/300x400" alt="Activity Image" />
