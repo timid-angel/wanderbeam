@@ -5,8 +5,8 @@ import LodgingCard from "../components/Lodging/LodgingCard";
 import { useState } from "react";
 import PaginationComponent from "../components/PaginationComponent";
 import lodgingInfos from "../data/lodgingData";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import Header from "../components/core/Header";
+import Footer from "../components/core/Footer";
 const LodgingPage = () => {
   const [currentPage, setCurrentPage] = useState<number>(1);
   
