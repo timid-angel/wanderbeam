@@ -410,7 +410,7 @@ const lodgingInfos = [
     budgetPerNight: "850 Birr",
     category: "Lodge",
     location: "Mountain Base",
-    qualityRating: 3.5,
+    qualityRating: 3,
     userRating: 3,
     description:
       "Mountain Lodge provides comfortable accommodations at the base of the mountains. Perfect for nature lovers and hikers.",
@@ -563,7 +563,7 @@ const lodgingInfos = [
       budgetPerNight: "1500 Birr",
       category: "Hotel",
       location: "Sunny Beach",
-      qualityRating: 4.5,
+      qualityRating: 4,
       userRating: 4,
       description: "Sunny Beach Hotel provides luxurious accommodations right on the beach. Enjoy the sun, sea, and a range of beach activities."
     },
@@ -574,7 +574,7 @@ const lodgingInfos = [
       category: "Apartment",
       location: "City Center",
       qualityRating: 4,
-      userRating: 3.5,
+      userRating: 3,
       description: "Urban Garden Apartments offer stylish and modern accommodations with a touch of nature in the heart of the city."
     },
     {
@@ -583,7 +583,7 @@ const lodgingInfos = [
       budgetPerNight: "900 Birr",
       category: "Inn",
       location: "Historic District",
-      qualityRating: 3.5,
+      qualityRating: 3,
       userRating: 3,
       description: "Historic Manor Inn offers charming and historic accommodations in the heart of the historic district. Perfect for history enthusiasts."
     },
@@ -594,7 +594,7 @@ const lodgingInfos = [
       category: "Resort",
       location: "Island",
       qualityRating: 5,
-      userRating: 4.5,
+      userRating: 4,
       description: "Island Getaway Resort offers luxurious and private accommodations on a beautiful island. Enjoy stunning views, a spa, and gourmet dining."
     }
   ];

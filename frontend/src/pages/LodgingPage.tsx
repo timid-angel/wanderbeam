@@ -1,13 +1,14 @@
-import { Search, FilterAltSharp } from "@mui/icons-material";
+import { Radio, Star } from "@mui/icons-material";
 import { Chip } from "@mui/material";
 import "../styles/Lodging.css";
 import LodgingCard from "../components/Lodging/LodgingCard";
 import { useState } from "react";
-import PaginationComponent from "../components/PaginationComponent";
+import PaginationComponent from "../components/core/PaginationComponent";
 import lodgingInfos from "../data/lodgingData";
 import Header from "../components/core/Header";
 import Footer from "../components/core/Footer";
 import SearchComponent from "../components/core/SearchComponent";
+import Filter from "../components/core/Filter";
 const LodgingPage = () => {
   const [currentPage, setCurrentPage] = useState<number>(1);
 
@@ -18,8 +19,13 @@ const LodgingPage = () => {
   const [retreatSelected, setRetreatSelection] = useState(false);
   const [apartmentSelected, setApartmentSelection] = useState(false);
   const [lodgeSelected, setLodgeSelection] = useState(false);
-  const [current, setCurrent] = useState('')
-  
+  const [current, setCurrent] = useState("");
+  const [showFiter, setFilter] = useState(false);
+  const [oneStar, setOneStar] = useState(false);
+  const [twoStar, setTwoStar] = useState(false);
+  const [threeStar, setThreeStar] = useState(false);
+  const [fourStar, setFourStar] = useState(false);
+  const [fiveStar, setFiveStar] = useState(false);
 
   var filteredLodge = lodgingInfos.filter(
     (lodge) =>
@@ -31,7 +37,6 @@ const LodgingPage = () => {
       (retreatSelected && lodge.category === "Retreat") ||
       (apartmentSelected && lodge.category === "Apartment")
   );
-
   if (
     !hotelSelected &&
     !innSelected &&
@@ -42,6 +47,30 @@ const LodgingPage = () => {
     !apartmentSelected
   ) {
     filteredLodge = lodgingInfos;
+  }
+
+  if (oneStar || twoStar || threeStar || fourStar || fiveStar) {
+    if (oneStar) {
+      filteredLodge = filteredLodge.filter(
+        (lodge) => lodge.qualityRating === 1
+      );
+    } else if (twoStar) {
+      filteredLodge = filteredLodge.filter(
+        (lodge) => lodge.qualityRating === 2
+      );
+    } else if (threeStar) {
+      filteredLodge = filteredLodge.filter(
+        (lodge) => lodge.qualityRating === 3
+      );
+    } else if (fourStar) {
+      filteredLodge = filteredLodge.filter(
+        (lodge) => lodge.qualityRating === 4
+      );
+    } else {
+      filteredLodge = filteredLodge.filter(
+        (lodge) => lodge.qualityRating === 5
+      );
+    }
   }
 
   filteredLodge = filteredLodge.filter((lodge) =>
@@ -57,12 +86,16 @@ const LodgingPage = () => {
     setCurrentPage(page);
   };
 
-  const handleSearch = (value: string)=>{
-    setCurrent(value)
-  }
+  const handleSearch = (value: string) => {
+    setCurrent(value);
+  };
+
+  const toggleFilter = () => {
+    setFilter((prev) => !prev);
+    console.log(showFiter);
+  };
 
   const handleChipSelection = (type: string) => {
-    console.log(hotelSelected);
     if (type === "hotel") {
       setHotelSelected((prev) => !prev);
     } else if (type === "inn") {
@@ -80,18 +113,113 @@ const LodgingPage = () => {
     }
   };
 
-  
+  const starSelection = (star: number) => {
+    if (star >= 1 && star < 3) {
+      setOneStar((prev) => !prev);
+      setTwoStar(false);
+      setThreeStar(false);
+      setFourStar(false);
+      setFiveStar(false);
+    } else if (star >= 2 && star<3) {
+      setTwoStar((prev) => !prev);
+      setOneStar(false);
+      setThreeStar(false);
+      setFourStar(false);
+      setFiveStar(false);
+    } else if (star >=3 && star<4) {
+      setThreeStar((prev) => !prev);
+      setTwoStar(false);
+      setOneStar(false);
+      setFourStar(false);
+      setFiveStar(false);
+    } else if (star >= 4 && star<5) {
+      setFourStar((prev) => !prev);
+      setTwoStar(false);
+      setThreeStar(false);
+      setOneStar(false);
+      setFiveStar(false);
+    } else if (star === 5) {
+      setFiveStar((prev) => !prev);
+      setTwoStar(false);
+      setThreeStar(false);
+      setFourStar(false);
+      setOneStar(false);
+    }
+  };
 
   return (
     <>
       <Header />
-      
-        <div>
-          <SearchComponent onSearch={handleSearch}/>
-          <div className="filter">
-            <FilterAltSharp />
-            <p>Filter</p>
+
+      <div>
+        <SearchComponent onSearch={handleSearch} />
+        <Filter onClick={toggleFilter} />
+        {showFiter && (
+          <div className="chips">
+            <Chip
+              onClick={() => {
+                starSelection(1);
+              }}
+              label={<Star sx={{ color: "gold" }} />}
+              variant={oneStar ? "filled" : "outlined"}
+            />
+            <Chip
+              onClick={() => {
+                starSelection(2);
+              }}
+              label={
+                <>
+                  <Star sx={{ color: "gold" }} />
+                  <Star sx={{ color: "gold" }} />
+                </>
+              }
+              variant={twoStar ? "filled" : "outlined"}
+            />
+            <Chip
+              onClick={() => {
+                starSelection(3);
+              }}
+              label={
+                <>
+                  <Star sx={{ color: "gold" }} />
+                  <Star sx={{ color: "gold" }} />
+                  <Star sx={{ color: "gold" }} />
+                </>
+              }
+              variant={threeStar ? "filled" : "outlined"}
+            />
+            <Chip
+              onClick={() => {
+                starSelection(4);
+              }}
+              label={
+                <>
+                  <Star sx={{ color: "gold" }} />
+                  <Star sx={{ color: "gold" }} />
+                  <Star sx={{ color: "gold" }} />
+                  <Star sx={{ color: "gold" }} />
+                </>
+              }
+              variant={fourStar ? "filled" : "outlined"}
+            />
+            <Chip
+              onClick={() => {
+                starSelection(5);
+              }}
+              label={
+                <>
+                  <Star sx={{ color: "gold" }} />
+                  <Star sx={{ color: "gold" }} />
+                  <Star sx={{ color: "gold" }} />
+                  <Star sx={{ color: "gold" }} />
+                  <Star sx={{ color: "gold" }} />
+                </>
+              }
+              variant={fiveStar ? "filled" : "outlined"}
+            />
           </div>
+        )}
+        {showFiter && (
           <div className="chips">
             <Chip
               onClick={() => {
@@ -143,30 +271,30 @@ const LodgingPage = () => {
               variant={apartmentSelected ? "filled" : "outlined"}
             />
           </div>
+        )}
 
-          <div className="lodgings">
-            {filteredLodge.length == 0 && <h2>No Data</h2>}
-            {currentPageLodge.map((lodging, index) => (
-              <LodgingCard
-                key={index}
-                name={lodging.name}
-                image={lodging.image}
-                description={lodging.description}
-                location={lodging.location}
-                budgetPerNight={lodging.budgetPerNight}
-                category={lodging.category}
-                userRating={lodging.userRating}
-                qualityRating={lodging.qualityRating}
-              />
-            ))}
-          </div>
-          <PaginationComponent
-            totalPages={totalPages}
-            currentPage={currentPage}
-            onPageChange={handlePageChange}
-          />
+        <div className="lodgings">
+          {filteredLodge.length == 0 && <h2>No Data</h2>}
+          {currentPageLodge.map((lodging, index) => (
+            <LodgingCard
+              key={index}
+              name={lodging.name}
+              image={lodging.image}
+              description={lodging.description}
+              location={lodging.location}
+              budgetPerNight={lodging.budgetPerNight}
+              category={lodging.category}
+              userRating={lodging.userRating}
+              qualityRating={lodging.qualityRating}
+            />
+          ))}
         </div>
-      
+        <PaginationComponent
+          totalPages={totalPages}
+          currentPage={currentPage}
+          onPageChange={handlePageChange}
+        />
+      </div>
 
       <Footer />
     </>

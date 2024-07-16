@@ -30,6 +30,7 @@
     position: relative;
     left: 35%;
     cursor: pointer;
+    margin-bottom: 20px;
 }
 
 .chips{
@@ -38,7 +39,7 @@
     flex-wrap: wrap;
     gap: 5px;
     justify-content: center;
-    margin-top: 30px;
+    margin-top: 5px;
 }
 
 .lodgings{
