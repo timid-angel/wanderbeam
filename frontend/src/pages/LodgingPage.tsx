@@ -2,9 +2,11 @@ import { Search, FilterAltSharp } from "@mui/icons-material";
 import { Chip } from "@mui/material";
 import "../styles/Lodging.css";
 import LodgingCard from "../components/Lodging/LodgingCard";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import PaginationComponent from "../components/PaginationComponent";
 import lodgingInfos from "../data/lodgingData";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 const LodgingPage = () => {
   const [currentPage, setCurrentPage] = useState<number>(1);
   
@@ -15,9 +17,11 @@ const LodgingPage = () => {
   const [retreatSelected, setRetreatSelection] = useState(false);
   const [apartmentSelected, setApartmentSelection] = useState(false);
   const [lodgeSelected, setLodgeSelection] = useState(false);
- 
+  const [current, setCurrent] = useState("");
 
-  
+  function handleChange(event: React.ChangeEvent<HTMLInputElement>) {
+    setCurrent(event.target.value);
+  }
   
 
   var filteredLodge = lodgingInfos.filter(
@@ -35,6 +39,7 @@ const LodgingPage = () => {
     filteredLodge = lodgingInfos;
   }
 
+  filteredLodge = filteredLodge.filter(lodge => lodge.description.toLowerCase().includes(current.toLowerCase()))
   const currentPageLodge = filteredLodge.slice((currentPage-1)*9,currentPage*9)
   const  totalPages =  Math.ceil(filteredLodge.length/9)
 
@@ -72,10 +77,12 @@ const LodgingPage = () => {
 
   
     return (
+      <>
+      <Header/>
       <div className="lodging-page">
         <div className="search">
           <Search />
-          <input className="search-input" type="text" />
+          <input onChange={handleChange} className="search-input" type="text" />
         </div>
         <div className="filter">
           <FilterAltSharp />
@@ -134,8 +141,9 @@ const LodgingPage = () => {
         </div>
 
         <div className="lodgings">
-          {currentPageLodge.map((lodging) => (
+          {currentPageLodge.map((lodging, index) => (
             <LodgingCard
+              key={index}
               name={lodging.name}
               image={lodging.image}
               description={lodging.description}
@@ -153,6 +161,9 @@ const LodgingPage = () => {
           onPageChange={handlePageChange}
         />
       </div>
+      <Footer/>
+      </>
+     
     );
 };
 

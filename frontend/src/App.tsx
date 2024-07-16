@@ -1,5 +1,9 @@
+import LodgingPage from "./pages/LodgingPage";
+
 const App = () => {
-  return;
+  return <>
+  <LodgingPage/>
+  </>;
 };
 
 export default App;
