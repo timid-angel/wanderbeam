@@ -10,15 +10,19 @@ export interface HistoryData {
   hotel: string;
   date: Date;
   activities: Activity[];
+  picture: string;
 }
 
 interface HistoryFilterOptions {
-  location: string;
+  location?: string;
 }
 
-export const getHistory = ({ location = "" }: HistoryFilterOptions) => {
+export const getHistory = ({ location }: HistoryFilterOptions) => {
   const data = getHistoryData();
-  const locationRegex = new RegExp(location);
+  if (location) {
+    const locationRegex = new RegExp(location);
+    return data.filter((item) => locationRegex.test(item.location));
+  }
 
-  return data.filter((item) => locationRegex.test(item.location));
+  return data;
 };
