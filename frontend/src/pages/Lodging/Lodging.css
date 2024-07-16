@@ -4,13 +4,14 @@
     padding: 5px;
     border-radius: 8px;
     margin: 30px auto;
+    cursor: pointer;
 }
 
 .search-input {
     flex-grow: 1;
     border: none;
     outline: none;
-    
+    cursor: pointer;
     font-size: 16px;
     margin-left: 10px;
   }
@@ -23,9 +24,11 @@
     border-radius: 5px;
     position: relative;
     left: 35%;
+    cursor: pointer;
 }
 
 .chips{
+    cursor: pointer;
     display: flex;
     flex-wrap: wrap;
     gap: 5px;
@@ -38,5 +41,5 @@
     flex-wrap: wrap;
     width: 90%;
     
-    margin: auto;
+    margin: 50px auto;
 }

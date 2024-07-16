@@ -4,6 +4,14 @@
     margin: 50px auto;
     border-top-left-radius: 9px;
     border-top-right-radius: 9px;
+    cursor: pointer;
+    transition: ease 1.2s;
+
+
+}
+
+.lodging-card:hover{
+    transform: scale(1.02);
 
 }
 
