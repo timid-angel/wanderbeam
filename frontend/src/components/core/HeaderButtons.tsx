@@ -1,6 +1,7 @@
 import { FormControl, MenuItem, Select, styled } from "@mui/material";
 import Button from "@mui/material/Button";
 import ReactCountryFlag from "react-country-flag";
+import { useNavigate } from "react-router-dom";
 
 const StyledButton = styled(Button)(`
   font-weight: bold;
@@ -9,14 +10,18 @@ const StyledButton = styled(Button)(`
 `);
 
 const HeaderButtons = () => {
+  const navigate = useNavigate();
+
+  const goToHistory = () => {
+    navigate("/history");
+  };
+
   return (
     <div className="flex justify-center items-center px-2 gap-3">
-      <StyledButton variant="text" className="">
+      <StyledButton variant="text" onClick={goToHistory}>
         History
       </StyledButton>
-      <StyledButton variant="text" className="">
-        Login
-      </StyledButton>
+      <StyledButton variant="text">Login</StyledButton>
       <Button variant="contained">Signup</Button>
       <div className="h-fit">
         <FormControl sx={{ m: 1 }} size="small">
