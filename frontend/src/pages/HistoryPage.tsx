@@ -62,7 +62,7 @@ const HistoryPage = () => {
           {(() => {
             const cards = getSummaryCards().filter((item) => item);
             return cards.length > 0 ? (
-              <div className="grid grid-cols-3 gap-x-16 gap-y-10 justify-center max-w-[1400px] flex-grow pb-5">
+              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 md:gap-x-8 xl:gap-x-16 gap-y-10 justify-center max-w-[1400px] flex-grow pb-5">
                 {cards}
               </div>
             ) : (
