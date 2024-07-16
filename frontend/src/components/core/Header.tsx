@@ -1,5 +1,5 @@
-import HeaderButtons from "./HeaderButtons";
-import Logo from "./Logo";
+import HeaderButtons from "../home_page/HeaderButtons";
+import Logo from "../home_page/Logo";
 
 const Header = () => {
   return (

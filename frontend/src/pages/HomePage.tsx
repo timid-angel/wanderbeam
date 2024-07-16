@@ -1,4 +1,5 @@
-import Header from "../components/home_page/Header";
+import Footer from "../components/core/Footer";
+import Header from "../components/core/Header";
 import ImageSection from "../components/home_page/ImageSection";
 import Steps from "../components/home_page/Steps";
 
@@ -12,6 +13,7 @@ const HomePage = () => {
         <ImageSection />
       </div>
       <Steps />
+      <Footer />
     </div>
   );
 };

@@ -20,10 +20,10 @@ const StepRow = ({ imagePosition, rowContent }: Props) => {
         />
       </div>
       <div className="px-8 w-full flex flex-col items-center justify-center">
-        <h3 className="text-[52px] tracking-tight font-light">
+        <h3 className="text-[45px] tracking-tight font-light">
           {rowContent.title}
         </h3>
-        <p className="text-[1.7rem] text-center font-light">
+        <p className="text-[1.55rem] text-center font-light">
           {rowContent.content}
         </p>
       </div>
