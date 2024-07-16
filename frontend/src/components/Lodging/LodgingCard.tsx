@@ -21,16 +21,16 @@ const LodgingCard = () => {
           <div>
             <p>Quality Rating:</p>
             <div className="stars">
-              <StarRate />
-              <StarRate />
-              <StarRate />
+              <StarRate sx={{ color: 'gold' }}/>
+              <StarRate sx={{ color: 'gold' }}/>
+              <StarRate sx={{ color: 'gold' }}/>
             </div>
           </div>
           <div>
             <p>Users Rating: </p>{" "}
             <div className="stars">
-              <StarRate />
-              <StarRate />
+              <StarRate sx={{ color: 'gold' }}/>
+              <StarRate sx={{ color: 'gold' }}/>
             </div>
           </div>
         </div>

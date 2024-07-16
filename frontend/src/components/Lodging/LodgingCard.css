@@ -19,6 +19,7 @@
 .lodging-card h3{
     text-align: center;
     font-size: 20px;
+    margin: 10px 0;
 }
 
 .catagory{
@@ -41,6 +42,7 @@
     display: block;
     border-radius: 5px;
     margin: 15px auto 10px;
+    font-weight: 600;
 }
 
 
