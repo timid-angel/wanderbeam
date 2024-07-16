@@ -1,5 +1,5 @@
 import hotel from "../../assets/hotel.webp";
-import "./LodgingCard.css";
+import "../../styles/LodgingCard.css";
 import { StarRate } from "@mui/icons-material";
 const LodgingCard = () => {
   return (
