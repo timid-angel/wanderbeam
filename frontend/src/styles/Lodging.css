@@ -1,55 +1,52 @@
-.search{
-    border: 1px solid grey;
-    width: 350px;
-    padding: 5px;
-    border-radius: 8px;
-    margin: 30px auto;
-    cursor: pointer;
-
+.search {
+  border: 1px solid grey;
+  width: 350px;
+  padding: 5px;
+  border-radius: 8px;
+  margin: 30px auto;
+  cursor: pointer;
 }
 
-.lodging-page{
-    margin: 100px 50px;
+.lodging-page {
+  margin: 100px 50px;
 }
 
 .search-input {
-    flex-grow: 1;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    font-size: 16px;
-    margin-left: 10px;
-  }
-
-.filter{
-    display: flex;
-    border: 1px solid grey;
-    width: 75px;
-    padding: 6px 4px;
-    border-radius: 5px;
-    position: relative;
-    left: 35%;
-    cursor: pointer;
-    margin-bottom: 20px;
+  flex-grow: 1;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 10px;
 }
 
-.chips{
-    cursor: pointer;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
-    justify-content: center;
-    margin-top: 5px;
+.filter {
+  display: flex;
+  border: 1px solid grey;
+  width: 75px;
+  padding: 6px 4px;
+  border-radius: 5px;
+  position: relative;
+  left: 35%;
+  cursor: pointer;
+  margin-bottom: 20px;
 }
 
-.lodgings{
-    display: flex;
-    flex-wrap: wrap;
-    width: 90%;
-    gap: 20px;
-    justify-content: center;
-
-    margin: 30px auto 50px;
+.chips {
+  cursor: pointer;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: center;
+  margin-top: 5px;
 }
 
+.lodgings {
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  gap: 20px;
+  justify-content: center;
 
+  margin: 30px auto 50px;
+}

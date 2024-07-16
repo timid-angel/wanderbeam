@@ -115,7 +115,7 @@ const LodgingPage = () => {
   };
 
   const starSelection = (star: number) => {
-    if (star ==1) {
+    if (star == 1) {
       setOneStar((prev) => !prev);
       setTwoStar(false);
       setThreeStar(false);
