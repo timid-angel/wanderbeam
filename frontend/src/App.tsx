@@ -1,9 +1,11 @@
 import LodgingPage from "./pages/LodgingPage";
 
 const App = () => {
-  return <>
-  <LodgingPage/>
-  </>;
+  return (
+    <>
+      <LodgingPage />
+    </>
+  );
 };
 
 export default App;

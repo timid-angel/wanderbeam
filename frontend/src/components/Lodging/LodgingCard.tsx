@@ -1,6 +1,7 @@
 import React from 'react';
 import '../../styles/LodgingCard.css';
 import { StarRate } from '@mui/icons-material';
+import { Link } from 'react-router-dom';
 
 interface LodgingCardProps {
   name: string;
@@ -15,7 +16,7 @@ interface LodgingCardProps {
 
 const LodgingCard: React.FC<LodgingCardProps> = (props) => {
   return (
-    <div className="lodging-card">
+    <Link to={`/lodging/${props.name}`}><div className="lodging-card">
       <img src={props.image} alt="hotel" />
       <div className="lodging-content">
         <h3>
@@ -50,9 +51,10 @@ const LodgingCard: React.FC<LodgingCardProps> = (props) => {
             </div>
           </div>
         </div>
-        <button className="detail-button">View Detail</button>
+        <Link to={`/lodging/${props.name}`}><button className="detail-button">View Detail</button></Link>
       </div>
     </div>
+    </Link>
   );
 };
 

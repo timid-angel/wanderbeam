@@ -1,3 +1,7 @@
-.app{
-    background-color: whitesmoke;
+/* prevents overscrolling */
+body {
+  overscroll-behavior-y: none;
+}
+.app {
+  background-color: whitesmoke;
 }

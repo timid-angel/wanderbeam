@@ -7,7 +7,19 @@ import lakeVIew from "../assets/lake-view.jpg";
 import skyline from "../assets/skyline.jpg";
 import forstRetreat from "../assets/forest.jpg";
 import desertOasis from "../assets/desert.jpg";
-const lodgingInfos = [
+
+interface LodgingInfo {
+  name: string;
+  description: string;
+  budgetPerNight: string;
+  category: string;
+  location: string;
+  qualityRating: number;
+  userRating: number;
+  image: any
+}
+
+const lodgingInfos: Array<LodgingInfo> = [
   {
     name: "Continental Hotel",
     image: continental,
@@ -547,58 +559,61 @@ const lodgingInfos = [
     description:
       "Lakeside Cottage provides cozy and peaceful accommodations by the lake. Ideal for a relaxing and nature-filled stay.",
   },
-    {
-      name: "Snowy Peaks Lodge",
-      image: countryLodge,
-      budgetPerNight: "1000 Birr",
-      category: "Lodge",
-      location: "Snowy Mountains",
-      qualityRating: 4,
-      userRating: 3.5,
-      description: "Snowy Peaks Lodge offers comfortable rooms with stunning views of the snowy mountains. Perfect for winter sports enthusiasts."
-    },
-    {
-      name: "Sunny Beach Hotel",
-      image: oceanBreeze,
-      budgetPerNight: "1500 Birr",
-      category: "Hotel",
-      location: "Sunny Beach",
-      qualityRating: 4,
-      userRating: 4,
-      description: "Sunny Beach Hotel provides luxurious accommodations right on the beach. Enjoy the sun, sea, and a range of beach activities."
-    },
-    {
-      name: "Urban Garden Apartments",
-      image: lakeVIew,
-      budgetPerNight: "1100 Birr",
-      category: "Apartment",
-      location: "City Center",
-      qualityRating: 4,
-      userRating: 3,
-      description: "Urban Garden Apartments offer stylish and modern accommodations with a touch of nature in the heart of the city."
-    },
-    {
-      name: "Historic Manor Inn",
-      image: continental,
-      budgetPerNight: "900 Birr",
-      category: "Inn",
-      location: "Historic District",
-      qualityRating: 3,
-      userRating: 3,
-      description: "Historic Manor Inn offers charming and historic accommodations in the heart of the historic district. Perfect for history enthusiasts."
-    },
-    {
-      name: "Island Getaway Resort",
-      image: cityCentral,
-      budgetPerNight: "1700 Birr",
-      category: "Resort",
-      location: "Island",
-      qualityRating: 5,
-      userRating: 4,
-      description: "Island Getaway Resort offers luxurious and private accommodations on a beautiful island. Enjoy stunning views, a spa, and gourmet dining."
-    }
-  ];
-  
-  
+  {
+    name: "Snowy Peaks Lodge",
+    image: countryLodge,
+    budgetPerNight: "1000 Birr",
+    category: "Lodge",
+    location: "Snowy Mountains",
+    qualityRating: 4,
+    userRating: 3.5,
+    description:
+      "Snowy Peaks Lodge offers comfortable rooms with stunning views of the snowy mountains. Perfect for winter sports enthusiasts.",
+  },
+  {
+    name: "Sunny Beach Hotel",
+    image: oceanBreeze,
+    budgetPerNight: "1500 Birr",
+    category: "Hotel",
+    location: "Sunny Beach",
+    qualityRating: 4,
+    userRating: 4,
+    description:
+      "Sunny Beach Hotel provides luxurious accommodations right on the beach. Enjoy the sun, sea, and a range of beach activities.",
+  },
+  {
+    name: "Urban Garden Apartments",
+    image: lakeVIew,
+    budgetPerNight: "1100 Birr",
+    category: "Apartment",
+    location: "City Center",
+    qualityRating: 4,
+    userRating: 3,
+    description:
+      "Urban Garden Apartments offer stylish and modern accommodations with a touch of nature in the heart of the city.",
+  },
+  {
+    name: "Historic Manor Inn",
+    image: continental,
+    budgetPerNight: "900 Birr",
+    category: "Inn",
+    location: "Historic District",
+    qualityRating: 3,
+    userRating: 3,
+    description:
+      "Historic Manor Inn offers charming and historic accommodations in the heart of the historic district. Perfect for history enthusiasts.",
+  },
+  {
+    name: "Island Getaway Resort",
+    image: cityCentral,
+    budgetPerNight: "1700 Birr",
+    category: "Resort",
+    location: "Island",
+    qualityRating: 5,
+    userRating: 4,
+    description:
+      "Island Getaway Resort offers luxurious and private accommodations on a beautiful island. Enjoy stunning views, a spa, and gourmet dining.",
+  },
+];
 
 export default lodgingInfos;
