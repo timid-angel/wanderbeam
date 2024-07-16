@@ -1,0 +1,59 @@
+.about h2, .amenties h2{
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px;
+}
+.about, .amenties{
+    width: 50%;
+    margin: 50px auto;
+    box-shadow: 0 4px 8px rgba(1, 1, 1, 0.2);
+    padding: 20px 30px;
+
+}
+
+.about-rating{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.about p{
+    margin: 5px 0;
+}
+
+.amenties .each{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    padding: 30px;
+    justify-content: center;
+    
+}
+
+
+.detail-title{
+    font-size: 50px;
+}
+
+.amenties .each div{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 5px 10px;
+    border: 1px solid rgb(13,228,236);
+    border-radius: 5px;
+
+}
+
+.amenties .each p{
+    font-size: 20px;
+}
+
+.amenties .each  img{
+    width: 50px;
+}
+
+.about a{
+    color: blue;
+}

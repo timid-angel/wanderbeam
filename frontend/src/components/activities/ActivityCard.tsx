@@ -1,23 +1,25 @@
 import React from 'react';
-import "/../styles/ActivityCard.css";
+import "../../styles/ActivityCard.css";
+import { Description } from '@mui/icons-material';
 
 interface ActivityCardProps{
-    catagory:String;
+    category:String;
     name:String;
-    span:String;
+    description:String;
+    image:string
 }
 
 
 
-const ActivityCard: React.FC<ActivityCardProps> = () => {
+const ActivityCard: React.FC<ActivityCardProps> = (props) => {
     return (
         <div className="card">
-            <img src="https://via.placeholder.com/300x400" alt="Activity Image" />
+            <img src={"./../../../public/" + props.image}/>
             <div className="overlay"></div>
-            <div className="text">Visiting a Place</div>
+            <div className="text">{props.category}</div>
             <div className="content">
-                <p>Name: Historical Museum</p>
-                <p>Time Frame: July 20 - July 23</p>
+                <p>{props.name}</p>
+                <p>{props.description}</p>
             </div>
         </div>
     );

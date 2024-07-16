@@ -7,7 +7,19 @@ import lakeVIew from "../assets/lake-view.jpg";
 import skyline from "../assets/skyline.jpg";
 import forstRetreat from "../assets/forest.jpg";
 import desertOasis from "../assets/desert.jpg";
-const lodgingInfos = [
+
+interface LodgingInfo {
+  name: string;
+  description: string;
+  budgetPerNight: string;
+  category: string;
+  location: string;
+  qualityRating: number;
+  userRating: number;
+  image: any
+}
+
+const lodgingInfos: Array<LodgingInfo> = [
   {
     name: "Continental Hotel",
     image: continental,

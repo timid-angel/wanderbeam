@@ -294,6 +294,8 @@ const LodgingPage = () => {
           currentPage={currentPage}
           onPageChange={handlePageChange}
         />
+
+        <button className="detail-button">Choose Your Activities</button>
       </div>
 
       <Footer />
