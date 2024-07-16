@@ -29,7 +29,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
           notchedOutline: "border-gray-300", // Outline color
         },
         endAdornment: (
-          <InputAdornment position="end">
+          <InputAdornment position="start">
             <IconButton
               onClick={handleSearch}
               className="text-blue-500 hover:text-blue-700"

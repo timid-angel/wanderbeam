@@ -13,7 +13,7 @@ const HomePage = () => {
         <ImageSection />
       </div>
       <Steps />
-      <Footer />
+      <Footer bg="" />
     </div>
   );
 };

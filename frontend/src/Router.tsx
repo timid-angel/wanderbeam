@@ -8,7 +8,7 @@ import ActivitiesPage from "./pages/ActivitiesPage";
 export const router = createBrowserRouter([
   {
     path: "/",
-    element: <HomePage />,
+    element: <PlacesPages />,
   },
   {
     path: "/history",

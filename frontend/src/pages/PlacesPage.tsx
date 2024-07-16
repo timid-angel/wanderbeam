@@ -4,6 +4,8 @@ import "../styles/output.css";
 import SearchBar from "../components/common/SearchBar";
 import { Pagination } from "@mui/material";
 import PlacesCard from "../components/Places/PlacesCard";
+import Header from "../components/core/Header";
+import Footer from "../components/core/Footer";
 
 function PlacesPages() {
   const [places, setPlaces] = useState<PlaceData[] | null>(null);
@@ -26,9 +28,10 @@ function PlacesPages() {
 
   return (
     <main className={"flex flex-col items-center"}>
+      <Header></Header>
       <div
         className={
-          "max-w-2xl w-full w-xl flex justify-center items-center my-4"
+          " max-w-2xl w-full w-xl flex justify-center items-center my-4"
         }
       >
         <SearchBar onSearch={HandleSearch}></SearchBar>
@@ -36,6 +39,7 @@ function PlacesPages() {
       {places && <PlacesCard data={places[0]}></PlacesCard>}
       {!places && <h1>No Items!</h1>}
       <Pagination></Pagination>
+      <Footer bg="gray-100"></Footer>
     </main>
   );
 }
