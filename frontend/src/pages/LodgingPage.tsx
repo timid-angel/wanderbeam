@@ -4,6 +4,7 @@ import "../styles/Lodging.css";
 import LodgingCard from "../components/Lodging/LodgingCard";
 import { useState } from "react";
 import PaginationComponent from "../components/PaginationComponent";
+import lodgingInfos from "../data/lodgingData";
 const LodgingPage = () => {
   const [currentPage, setCurrentPage] = useState<number>(1);
   const totalPages = 10;
@@ -30,15 +31,18 @@ const LodgingPage = () => {
       </div>
 
       <div className="lodgings">
-        <LodgingCard/>
-        <LodgingCard/>
-        <LodgingCard/>
-        <LodgingCard/>
-        <LodgingCard/>
-        <LodgingCard/>
-        <LodgingCard/>
-        <LodgingCard/>
-        <LodgingCard/>
+        {lodgingInfos.map((lodging) => (
+          <LodgingCard
+            name={lodging.name}
+            image={lodging.image}
+            description={lodging.description}
+            location={lodging.location}
+            budgetPerNight={lodging.budgetPerNight}
+            category={lodging.category}
+            userRating={lodging.userRating}
+            qualityRating={lodging.qualityRating}
+          />
+        ))}
       </div>
       <PaginationComponent
         totalPages={totalPages}
