@@ -1,10 +1,9 @@
 import { Search, FilterAltSharp } from "@mui/icons-material";
 import { Chip } from "@mui/material";
-import { PageviewTwoTone } from "@mui/icons-material";
 import "./Lodging.css";
 import LodgingCard from "../../components/Lodging/LodgingCard";
 import { useState } from "react";
-import PaginationComponent from "../../components/PaginatinComponent";
+import PaginationComponent from "../../components/PaginationComponent";
 const LodgingPage = () => {
   const [currentPage, setCurrentPage] = useState<number>(1);
   const totalPages = 10;
