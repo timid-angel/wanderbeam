@@ -68,3 +68,8 @@ span{
     margin: 5px 0;
     text-decoration: underline;
 }
+.lodging-page{
+    display: flex;
+    justify-content: space-between;
+    min-height:fit-content;
+}
