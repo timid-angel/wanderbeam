@@ -6,6 +6,7 @@ import Pagination from "../components/core/PaginationComponent";
 import Header from "../components/core/Header";
 import Footer from "../components/core/Footer";
 import PlacesList from "../components/Places/PlacesList";
+import EmptyIndicator from "../components/core/EmptyIndicator";
 
 const PlacesPages = () => {
   const [places, setPlaces] = useState<PlaceData[]>([]);
@@ -48,7 +49,7 @@ const PlacesPages = () => {
       {places.length > 0 ? (
         <PlacesList places={currentPlaces} />
       ) : (
-        <h1>No Items!</h1>
+        <EmptyIndicator text="No Result!"></EmptyIndicator>
       )}
       <Pagination
         totalPages={Math.ceil(places.length / itemsPerPage)}
