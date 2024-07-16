@@ -1,6 +1,5 @@
 import React from 'react';
 import "../../styles/ActivityCard.css";
-import { Description } from '@mui/icons-material';
 
 interface ActivityCardProps{
     category:String;

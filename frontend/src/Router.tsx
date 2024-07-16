@@ -5,6 +5,7 @@ import LodgingPage from "./pages/LodgingPage";
 import LodgingDetails from "./pages/LodgingDetails";
 import ActivitiesPage from "./pages/ActivitiesPage";
 import PlacesPage from "./pages/PlacesPage";
+import SummaryPage from "./pages/SummaryPage";
 
 export const router = createBrowserRouter([
   {
@@ -31,4 +32,8 @@ export const router = createBrowserRouter([
     path: "/lodging/:name",
     element: <LodgingDetails />,
   },
+  {
+    path:"/summary",
+    element:<SummaryPage/>
+  }
 ]);
