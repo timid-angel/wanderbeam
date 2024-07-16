@@ -11,7 +11,7 @@ const HistoryHeader = () => {
   return (
     <div>
       <div
-        className="flex justify-start items-center gap-2 px-4 py-2 cursor-pointer"
+        className="flex justify-start items-center gap-4 px-4 py-2 cursor-pointer"
         onClick={goToHome}
       >
         <FaArrowLeft className="text-slate-600" size={26} />

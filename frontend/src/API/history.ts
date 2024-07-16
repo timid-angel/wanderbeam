@@ -20,7 +20,7 @@ interface HistoryFilterOptions {
 export const getHistory = ({ location }: HistoryFilterOptions) => {
   const data = getHistoryData();
   if (location) {
-    const locationRegex = new RegExp(location);
+    const locationRegex = new RegExp(location, "i");
     return data.filter((item) => locationRegex.test(item.location));
   }
 

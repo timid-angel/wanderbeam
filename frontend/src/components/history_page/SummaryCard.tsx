@@ -31,7 +31,7 @@ const SummaryCard = (data: HistoryData) => {
   const { location, date, activities, hotel, picture } = data;
 
   return (
-    <div className="w-[390px] h-[496px] rounded-2xl overflow-hidden relative bg-red-300 flex flex-col justify-end items-center">
+    <div className="mx-auto w-[390px] h-[496px] rounded-2xl overflow-hidden relative bg-red-300 flex flex-col justify-end items-center ease-in-out scale-[1] transition duration-500 hover:scale-[1.02] hover:transition-all hover:ease-in-out hover:duration-300">
       <div className="w-[370px] h-[188px] bg-slate-100 opacity-95 z-10 rounded-3xl mb-3 flex flex-col items-center">
         <div className="flex justify-center gap-2 items-center pt-1">
           <FaLocationDot color={"#31849E"} size={20} />
@@ -43,8 +43,9 @@ const SummaryCard = (data: HistoryData) => {
           <p>{formatDate(date)}</p>
         </div>
         <div className="flex flex-wrap gap-2 px-5 pt-3 items-center justify-center">
-          {activities.map((item) => (
+          {activities.map((item, index) => (
             <Chip
+              key={index}
               icon={getIconFromCategory(item.iconCategory)}
               label={item.name}
               variant="outlined"
