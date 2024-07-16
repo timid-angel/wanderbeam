@@ -29,3 +29,8 @@ footer .logo{
     display: flex;
     gap: 5px;
 }
+
+
+#root{
+    background-color: whitesmoke;
+}

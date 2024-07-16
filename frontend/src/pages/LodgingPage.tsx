@@ -7,9 +7,10 @@ import PaginationComponent from "../components/PaginationComponent";
 import lodgingInfos from "../data/lodgingData";
 import Header from "../components/core/Header";
 import Footer from "../components/core/Footer";
+import SearchComponent from "../components/core/SearchComponent";
 const LodgingPage = () => {
   const [currentPage, setCurrentPage] = useState<number>(1);
-  
+
   const [innSelected, setInnSelection] = useState(false);
   const [resortSelected, setResortSelection] = useState(false);
   const [guesthouseSelected, setguesthouseSelection] = useState(false);
@@ -17,11 +18,7 @@ const LodgingPage = () => {
   const [retreatSelected, setRetreatSelection] = useState(false);
   const [apartmentSelected, setApartmentSelection] = useState(false);
   const [lodgeSelected, setLodgeSelection] = useState(false);
-  const [current, setCurrent] = useState("");
-
-  function handleChange(event: React.ChangeEvent<HTMLInputElement>) {
-    setCurrent(event.target.value);
-  }
+  const [current, setCurrent] = useState('')
   
 
   var filteredLodge = lodgingInfos.filter(
@@ -35,24 +32,34 @@ const LodgingPage = () => {
       (apartmentSelected && lodge.category === "Apartment")
   );
 
-  if (!hotelSelected && !innSelected && !guesthouseSelected && !resortSelected && !lodgeSelected && !retreatSelected && !apartmentSelected){
+  if (
+    !hotelSelected &&
+    !innSelected &&
+    !guesthouseSelected &&
+    !resortSelected &&
+    !lodgeSelected &&
+    !retreatSelected &&
+    !apartmentSelected
+  ) {
     filteredLodge = lodgingInfos;
   }
 
-  filteredLodge = filteredLodge.filter(lodge => lodge.description.toLowerCase().includes(current.toLowerCase()))
-  const currentPageLodge = filteredLodge.slice((currentPage-1)*9,currentPage*9)
-  const  totalPages =  Math.ceil(filteredLodge.length/9)
-
- 
-
- 
-
-
+  filteredLodge = filteredLodge.filter((lodge) =>
+    lodge.description.toLowerCase().includes(current.toLowerCase())
+  );
+  const currentPageLodge = filteredLodge.slice(
+    (currentPage - 1) * 9,
+    currentPage * 9
+  );
+  const totalPages = Math.ceil(filteredLodge.length / 9);
 
   const handlePageChange = (page: number) => {
     setCurrentPage(page);
   };
-  
+
+  const handleSearch = (value: string)=>{
+    setCurrent(value)
+  }
 
   const handleChipSelection = (type: string) => {
     console.log(hotelSelected);
@@ -67,8 +74,6 @@ const LodgingPage = () => {
     } else if (type === "lodge") {
       setLodgeSelection((prev) => !prev);
     } else if (type === "apartment") {
-
-    
       setApartmentSelection((prev) => !prev);
     } else if (type === "retreat") {
       setRetreatSelection((prev) => !prev);
@@ -76,97 +81,96 @@ const LodgingPage = () => {
   };
 
   
-    return (
-      <>
-      <Header/>
-      
-      <div className="lodging-page">
-        <div className="search">
-          <Search />
-          <input onChange={handleChange} className="search-input" type="text" />
-        </div>
-        <div className="filter">
-          <FilterAltSharp />
-          <p>Filter</p>
-        </div>
-        <div className="chips">
-          <Chip
-            onClick={() => {
-              handleChipSelection("hotel");
-            }}
-            label="Hotel"
-            variant={hotelSelected ? "filled" : "outlined"}
-          />
-          <Chip
-            onClick={() => {
-              handleChipSelection("inn");
-            }}
-            label="Inn"
-            variant={innSelected ? "filled" : "outlined"}
-          />
-          <Chip
-            onClick={() => {
-              handleChipSelection("guesthouse");
-            }}
-            label="Guesthouse"
-            variant={guesthouseSelected ? "filled" : "outlined"}
-          />
-          <Chip
-            onClick={() => {
-              handleChipSelection("resort");
-            }}
-            label="resort"
-            variant={resortSelected ? "filled" : "outlined"}
-          />
-          <Chip
-            onClick={() => {
-              handleChipSelection("lodge");
-            }}
-            label="lodge"
-            variant={lodgeSelected ? "filled" : "outlined"}
-          />
-          <Chip
-            onClick={() => {
-              handleChipSelection("retreat");
-            }}
-            label="retreat"
-            variant={retreatSelected ? "filled" : "outlined"}
-          />
-          <Chip
-            onClick={() => {
-              handleChipSelection("apartment");
-            }}
-            label="apartment"
-            variant={apartmentSelected ? "filled" : "outlined"}
-          />
-        </div>
 
-        <div className="lodgings">
-          {filteredLodge.length == 0 && <h2>No Data</h2>}
-          {currentPageLodge.map((lodging, index) => (
-            <LodgingCard
-              key={index}
-              name={lodging.name}
-              image={lodging.image}
-              description={lodging.description}
-              location={lodging.location}
-              budgetPerNight={lodging.budgetPerNight}
-              category={lodging.category}
-              userRating={lodging.userRating}
-              qualityRating={lodging.qualityRating}
+  return (
+    <>
+      <Header />
+      
+        <div>
+          <SearchComponent onSearch={handleSearch}/>
+          <div className="filter">
+            <FilterAltSharp />
+            <p>Filter</p>
+          </div>
+          <div className="chips">
+            <Chip
+              onClick={() => {
+                handleChipSelection("hotel");
+              }}
+              label="Hotel"
+              variant={hotelSelected ? "filled" : "outlined"}
             />
-          ))}
+            <Chip
+              onClick={() => {
+                handleChipSelection("inn");
+              }}
+              label="Inn"
+              variant={innSelected ? "filled" : "outlined"}
+            />
+            <Chip
+              onClick={() => {
+                handleChipSelection("guesthouse");
+              }}
+              label="Guesthouse"
+              variant={guesthouseSelected ? "filled" : "outlined"}
+            />
+            <Chip
+              onClick={() => {
+                handleChipSelection("resort");
+              }}
+              label="resort"
+              variant={resortSelected ? "filled" : "outlined"}
+            />
+            <Chip
+              onClick={() => {
+                handleChipSelection("lodge");
+              }}
+              label="lodge"
+              variant={lodgeSelected ? "filled" : "outlined"}
+            />
+            <Chip
+              onClick={() => {
+                handleChipSelection("retreat");
+              }}
+              label="retreat"
+              variant={retreatSelected ? "filled" : "outlined"}
+            />
+            <Chip
+              onClick={() => {
+                handleChipSelection("apartment");
+              }}
+              label="apartment"
+              variant={apartmentSelected ? "filled" : "outlined"}
+            />
+          </div>
+
+          <div className="lodgings">
+            {filteredLodge.length == 0 && <h2>No Data</h2>}
+            {currentPageLodge.map((lodging, index) => (
+              <LodgingCard
+                key={index}
+                name={lodging.name}
+                image={lodging.image}
+                description={lodging.description}
+                location={lodging.location}
+                budgetPerNight={lodging.budgetPerNight}
+                category={lodging.category}
+                userRating={lodging.userRating}
+                qualityRating={lodging.qualityRating}
+              />
+            ))}
+          </div>
+          <PaginationComponent
+            totalPages={totalPages}
+            currentPage={currentPage}
+            onPageChange={handlePageChange}
+          />
         </div>
-        <PaginationComponent
-          totalPages={totalPages}
-          currentPage={currentPage}
-          onPageChange={handlePageChange}
-        />
-      </div>
-      <Footer/>
-      </>
-     
-    );
+      
+
+      <Footer />
+    </>
+  );
 };
 
 export default LodgingPage;
