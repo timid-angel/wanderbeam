@@ -30,7 +30,7 @@
     margin: 10px 0;
 }
 
-.catagory{
+.category{
     margin: 5px 10px;
 }
 
@@ -67,4 +67,9 @@ span{
     font-weight: bold;
     margin: 5px 0;
     text-decoration: underline;
+}
+.lodging-page{
+    display: flex;
+    justify-content: space-between;
+    min-height:fit-content;
 }
