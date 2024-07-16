@@ -25,7 +25,7 @@ const PaginationComponent: React.FC<PaginationComponentProps> = ({
           count={totalPages}
           page={currentPage}
           onChange={handleChange}
-          variant="outlined"
+          variant="text"
           shape="rounded"
         />
       </Stack>

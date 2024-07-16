@@ -12,7 +12,7 @@ const LodgingPage = () => {
     setCurrentPage(page);
   };
   return (
-    <div>
+    <div className="lodging-page">
       <div className="search">
         <Search />
         <input className="search-input" type="text" />

@@ -66,4 +66,5 @@ span{
 .rate{
     font-weight: bold;
     margin: 5px 0;
+    text-decoration: underline;
 }

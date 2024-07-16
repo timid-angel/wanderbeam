@@ -5,6 +5,11 @@
     border-radius: 8px;
     margin: 30px auto;
     cursor: pointer;
+
+}
+
+.lodging-page{
+    margin: 100px 50px;
 }
 
 .search-input {
@@ -40,6 +45,8 @@
     display: flex;
     flex-wrap: wrap;
     width: 90%;
-    
+    gap: 20px;
+    justify-content: center;
+
     margin: 50px auto;
 }
