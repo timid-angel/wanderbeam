@@ -1,5 +1,5 @@
-import logo from '../../assets/sample-logo-main.png';
-import './Footer.css';
+import logo from '../assets/sample-logo-main.png';
+import '../styles/Footer.css';
 import { Facebook, LinkedIn, Twitter, Instagram } from '@mui/icons-material';
 
 const Footer = () => {

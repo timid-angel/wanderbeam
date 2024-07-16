@@ -1,36 +1,52 @@
-import hotel from "../../assets/hotel.webp";
-import "./LodgingCard.css";
-import { StarRate } from "@mui/icons-material";
-const LodgingCard = () => {
+import React from 'react';
+import '../../styles/LodgingCard.css';
+import { StarRate } from '@mui/icons-material';
+
+interface LodgingCardProps {
+  name: string;
+  description: string;
+  budgetPerNight: string;
+  category: string;
+  location: string;
+  qualityRating: number;
+  userRating: number;
+  image: any
+}
+
+const LodgingCard: React.FC<LodgingCardProps> = (props) => {
   return (
     <div className="lodging-card">
-      <img src={hotel} alt="hotel" />
+      <img src={props.image} alt="hotel" />
       <div className="lodging-content">
-        <h3><span>Name</span>: Continental Hotel</h3>
-        <p className="description">
-          Lorem ipsum dolor sit amet consectetur. Ornare sagittis tortor duis
-          congue accumsan bibendum in. In placerat et nibh suscipit semper nam
-          consequat. Nulla at amet velit ac adipiscing euismod. Aliquet sed id
-          vestibulum amet.
+        <h3>
+          <span>Name</span>: {props.name}
+        </h3>
+        <p className="description">{props.description}</p>
+        <p className="category">
+          <span>Budget Per Night</span>: {props.budgetPerNight}
         </p>
-        <p className="catagory"><span>Budget Per Night</span> : 1000Birr</p>
-        <p className="catagory"><span>Catagory</span> : Hotel</p>
-        <p className="catagory"><span>Locaton</span> : Beach City</p>
+        <p className="category">
+          <span>Category</span>: {props.category}
+        </p>
+        <p className="category">
+          <span>Location</span>: {props.location}
+        </p>
         <h3 className="rate">Ratings</h3>
         <div className="ratings">
           <div>
             <p>Quality Rating:</p>
             <div className="stars">
-              <StarRate sx={{ color: 'gold' }}/>
-              <StarRate sx={{ color: 'gold' }}/>
-              <StarRate sx={{ color: 'gold' }}/>
+              {Array.from({ length: props.qualityRating }, (_, i) => (
+                <StarRate key={i} sx={{ color: 'gold' }} />
+              ))}
             </div>
           </div>
           <div>
-            <p>Users Rating: </p>{" "}
+            <p>Users Rating:</p>
             <div className="stars">
-              <StarRate sx={{ color: 'gold' }}/>
-              <StarRate sx={{ color: 'gold' }}/>
+              {Array.from({ length: props.userRating }, (_, i) => (
+                <StarRate key={i} sx={{ color: 'gold' }} />
+              ))}
             </div>
           </div>
         </div>
