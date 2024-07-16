@@ -79,6 +79,7 @@ const LodgingPage = () => {
     return (
       <>
       <Header/>
+      
       <div className="lodging-page">
         <div className="search">
           <Search />
@@ -141,6 +142,7 @@ const LodgingPage = () => {
         </div>
 
         <div className="lodgings">
+          {filteredLodge.length == 0 && <h2>No Data</h2>}
           {currentPageLodge.map((lodging, index) => (
             <LodgingCard
               key={index}
