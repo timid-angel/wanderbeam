@@ -9,9 +9,9 @@ import Header from "../components/core/Header";
 import Footer from "../components/core/Footer";
 import SearchComponent from "../components/core/SearchComponent";
 import Filter from "../components/core/Filter";
+import EmptyIndicator from "../components/core/EmptyIndicator";
 const LodgingPage = () => {
   const [currentPage, setCurrentPage] = useState<number>(1);
-
   const [innSelected, setInnSelection] = useState(false);
   const [resortSelected, setResortSelection] = useState(false);
   const [guesthouseSelected, setguesthouseSelection] = useState(false);
@@ -27,7 +27,7 @@ const LodgingPage = () => {
   const [fourStar, setFourStar] = useState(false);
   const [fiveStar, setFiveStar] = useState(false);
 
-  var filteredLodge = lodgingInfos.filter(
+  let filteredLodge = lodgingInfos.filter(
     (lodge) =>
       (hotelSelected && lodge.category === "Hotel") ||
       (innSelected && lodge.category === "Inn") ||
@@ -149,10 +149,9 @@ const LodgingPage = () => {
   };
 
   return (
-    <>
+    <div className="min-h-screen flex flex-col">
       <Header />
-
-      <div className="lodging-container">
+      <div className="lodging-container flex-grow flex flex-col">
         <SearchComponent onSearch={handleSearch} />
         <Filter onClick={toggleFilter} />
         {showFiter && (
@@ -274,8 +273,8 @@ const LodgingPage = () => {
           </div>
         )}
 
-        <div className="lodgings">
-          {filteredLodge.length == 0 && <h2>No Data</h2>}
+        <div className="lodgings flex-grow flex justify-center items-center">
+          {filteredLodge.length == 0 && <EmptyIndicator text="No Data" />}
           {currentPageLodge.map((lodging, index) => (
             <LodgingCard
               key={index}
@@ -298,7 +297,7 @@ const LodgingPage = () => {
       </div>
 
       <Footer />
-    </>
+    </div>
   );
 };
 
