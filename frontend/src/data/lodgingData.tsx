@@ -124,7 +124,7 @@ const lodgingInfos = [
     image: forstRetreat,
     category: "Lodge",
     location: "Mountain Base",
-    qualityRating: 3.5,
+    qualityRating: 3,
     userRating: 3,
     description:
       "Mountain Escape Lodge offers a peaceful retreat at the base of the mountains. Ideal for nature lovers and hikers.",
@@ -135,7 +135,7 @@ const lodgingInfos = [
     image: skyline,
     category: "Boutique Hotel",
     location: "City Center",
-    qualityRating: 4.5,
+    qualityRating: 4,
     userRating: 4,
     description:
       "Urban Boutique Hotel provides stylish accommodations in the heart of City Center. Perfect for business and leisure travelers.",
@@ -179,7 +179,7 @@ const lodgingInfos = [
     image: oceanBreeze,
     category: "Bungalow",
     location: "Beach",
-    qualityRating: 4.5,
+    qualityRating: 4,
     userRating: 4,
     description:
       "Beachfront Bungalows offer private and cozy accommodations right on the beach. Perfect for a relaxing seaside vacation.",
@@ -223,7 +223,7 @@ const lodgingInfos = [
     budgetPerNight: "800 Birr",
     category: "Bed & Breakfast",
     location: "Highlands",
-    qualityRating: 3.5,
+    qualityRating: 3,
     userRating: 3,
     description:
       "Highland Bed & Breakfast offers cozy rooms and delicious breakfast in the Highlands. Perfect for a quiet retreat.",
@@ -245,7 +245,7 @@ const lodgingInfos = [
     budgetPerNight: "1500 Birr",
     category: "Hotel",
     location: "City Center",
-    qualityRating: 4.5,
+    qualityRating: 4,
     userRating: 4,
     description:
       "Metropolitan Hotel provides luxury accommodations in City Center. Perfect for both business and leisure travelers.",
@@ -278,7 +278,7 @@ const lodgingInfos = [
     image: continental,
     category: "Apartment",
     location: "City Center",
-    qualityRating: 4.5,
+    qualityRating: 4,
     userRating: 4,
     description:
       "Urban Loft Apartments provide stylish and modern lofts in City Center. Perfect for extended stays in the city.",
@@ -289,7 +289,7 @@ const lodgingInfos = [
     budgetPerNight: "850 Birr",
     category: "Lodge",
     location: "Mountain Ridge",
-    qualityRating: 3.5,
+    qualityRating: 3,
     userRating: 3,
     description:
       "Mountain Ridge Lodge offers comfortable rooms with stunning mountain views. Ideal for hikers and nature enthusiasts.",
@@ -311,7 +311,7 @@ const lodgingInfos = [
     budgetPerNight: "1400 Birr",
     category: "Hotel",
     location: "Downtown",
-    qualityRating: 4.5,
+    qualityRating: 4,
     userRating: 4,
     description:
       "City Plaza Hotel offers luxury rooms and top-notch amenities in Downtown. Ideal for both business and leisure travelers.",
@@ -344,7 +344,7 @@ const lodgingInfos = [
     image: desertOasis,
     category: "Lodge",
     location: "Highlands",
-    qualityRating: 3.5,
+    qualityRating: 3,
     userRating: 3,
     description:
       "Highland Lodge offers cozy accommodations and stunning views in the Highlands. Perfect for a quiet and relaxing getaway.",
@@ -399,7 +399,7 @@ const lodgingInfos = [
     budgetPerNight: "1300 Birr",
     category: "Apartment",
     location: "City Center",
-    qualityRating: 4.5,
+    qualityRating: 4,
     userRating: 4,
     description:
       "City Central Apartments offer stylish and modern apartments in the heart of the city. Ideal for extended stays.",
@@ -432,7 +432,7 @@ const lodgingInfos = [
     budgetPerNight: "1500 Birr",
     category: "Hotel",
     location: "City Center",
-    qualityRating: 4.5,
+    qualityRating: 4,
     userRating: 4,
     description:
       "Urban Retreat Hotel offers luxury accommodations and top-notch amenities in City Center. Perfect for business and leisure travelers.",
@@ -465,7 +465,7 @@ const lodgingInfos = [
     budgetPerNight: "800 Birr",
     category: "Retreat",
     location: "Highlands",
-    qualityRating: 3.5,
+    qualityRating: 4,
     userRating: 3,
     description:
       "Highland Retreat offers cozy accommodations and stunning views in the Highlands. Perfect for a quiet and relaxing getaway.",
@@ -520,7 +520,7 @@ const lodgingInfos = [
     budgetPerNight: "1300 Birr",
     category: "Apartment",
     location: "City Center",
-    qualityRating: 4.5,
+    qualityRating: 2,
     userRating: 4,
     description:
       "City Loft Apartments provide stylish and modern lofts in the heart of the city. Ideal for extended stays.",
@@ -531,7 +531,7 @@ const lodgingInfos = [
     budgetPerNight: "850 Birr",
     category: "Lodge",
     location: "Mountain Peak",
-    qualityRating: 3.5,
+    qualityRating: 1,
     userRating: 3,
     description:
       "Mountain Peak Lodge offers comfortable accommodations with stunning mountain views. Perfect for nature enthusiasts.",
@@ -542,7 +542,7 @@ const lodgingInfos = [
     budgetPerNight: "950 Birr",
     category: "Cottage",
     location: "Lakeside",
-    qualityRating: 4,
+    qualityRating: 2,
     userRating: 3.5,
     description:
       "Lakeside Cottage provides cozy and peaceful accommodations by the lake. Ideal for a relaxing and nature-filled stay.",

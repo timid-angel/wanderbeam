@@ -1,4 +1,4 @@
-import { Radio, Star } from "@mui/icons-material";
+import { Star } from "@mui/icons-material";
 import { Chip } from "@mui/material";
 import "../styles/Lodging.css";
 import LodgingCard from "../components/Lodging/LodgingCard";
@@ -37,6 +37,7 @@ const LodgingPage = () => {
       (retreatSelected && lodge.category === "Retreat") ||
       (apartmentSelected && lodge.category === "Apartment")
   );
+
   if (
     !hotelSelected &&
     !innSelected &&
@@ -114,25 +115,25 @@ const LodgingPage = () => {
   };
 
   const starSelection = (star: number) => {
-    if (star >= 1 && star < 3) {
+    if (star ==1) {
       setOneStar((prev) => !prev);
       setTwoStar(false);
       setThreeStar(false);
       setFourStar(false);
       setFiveStar(false);
-    } else if (star >= 2 && star<3) {
+    } else if (star == 2) {
       setTwoStar((prev) => !prev);
       setOneStar(false);
       setThreeStar(false);
       setFourStar(false);
       setFiveStar(false);
-    } else if (star >=3 && star<4) {
+    } else if (star == 3) {
       setThreeStar((prev) => !prev);
       setTwoStar(false);
       setOneStar(false);
       setFourStar(false);
       setFiveStar(false);
-    } else if (star >= 4 && star<5) {
+    } else if (star == 4) {
       setFourStar((prev) => !prev);
       setTwoStar(false);
       setThreeStar(false);
@@ -151,7 +152,7 @@ const LodgingPage = () => {
     <>
       <Header />
 
-      <div>
+      <div className="lodging-container">
         <SearchComponent onSearch={handleSearch} />
         <Filter onClick={toggleFilter} />
         {showFiter && (
