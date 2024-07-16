@@ -1,4 +1,4 @@
-import HeaderButtons from "../home_page/HeaderButtons";
+import HeaderButtons from "./HeaderButtons";
 import Logo from "../home_page/Logo";
 
 const Header = () => {
