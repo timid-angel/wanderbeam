@@ -16,19 +16,19 @@ const SummaryPage: React.FC = () => {
                 <div className="text-center mb-5">
                     <h1 className="text-4xl font-bold">Vacation Summary</h1>
                 </div>
-                <div className="overlay mb-5 p-4">
+                <div className="summary-overlay mb-5 p-4">
                     <h2 className="text-2xl"><span className="icon">📍</span> Reykjavik, Iceland</h2>
-                    <div className="card">
+                    <div className="summary-card">
                         <img src="public/activities/activity2.jpg" alt="Reykjavik, Iceland" />
                     </div>
                 </div>
-                <div className="overlay mb-5 p-4">
+                <div className="summary-overlay mb-5 p-4">
                     <h2 className="text-2xl"><span className="icon">🏨</span> Reykjavik Marina - Berjaya Iceland Hotels</h2>
-                    <div className="card">
+                    <div className="summary-card">
                         <img src="public/activities/activity4.jpg" alt="Reykjavik Marina - Berjaya Iceland Hotels" />
                     </div>
                 </div>
-                <div className="overlay p-4">
+                <div className="summary-overlay p-4">
                     <h2 className="text-2xl"><span className="icon">🗓️</span> Timeline for Activities</h2>
                     <div className="timeline">
                         <div className="timeline-item">

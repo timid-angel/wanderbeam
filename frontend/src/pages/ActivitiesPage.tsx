@@ -6,6 +6,7 @@ import SearchComponent from "../components/core/SearchComponent";
 import ActivityCard from "../components/activities/ActivityCard";
 import PaginationComponent from "../components/core/PaginationComponent";
 import Filter from "../components/core/Filter";
+import "../styles/ActivitiesPage.css";
 const activitiesData = [
     { 
       name: "Swimming at the Beach", 
@@ -103,7 +104,6 @@ const ActivitiesPage = () => {
   const [campingSelected, setCampingSelected] = useState(false);
   const [concertsSelected, setConcertsSelected] = useState(false);
   const [visitSelected, setVisitSelected] = useState(false);
-
   let filteredActivities = activitiesData.filter(
     (activity) =>
       (swimmingSelected && activity.category === "Swimming") ||
@@ -198,7 +198,7 @@ const ActivitiesPage = () => {
           </div>
         )}
 
-        <div className="lodgings">
+        <div className="activities">
           {currentPageActivities.map((activity, index) => (
             <ActivityCard key={index} {...activity} />
           ))}
@@ -210,7 +210,6 @@ const ActivitiesPage = () => {
           onPageChange={handlePageChange}
         />
 
-        {/* Centered Summary Button */}
         <div style={{ display: "flex", justifyContent: "center", marginTop: "20px", marginRight:"60px" , marginBottom :"30px"}}>
           <Button variant="contained" color="primary">
             Summary

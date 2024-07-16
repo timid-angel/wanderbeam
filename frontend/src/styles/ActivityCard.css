@@ -1,4 +1,3 @@
-/* styles/ActivityCard.css */
 .card {
     position: relative;
     width: 350px;
@@ -21,7 +20,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.4); /* Dark overlay for better text visibility */
+    background: rgba(0, 0, 0, 0.4); 
 }
 
 .card .text {
