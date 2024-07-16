@@ -16,6 +16,12 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
     }
   };
 
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === "Enter") {
+      onSearch(searchTerm);
+    }
+  };
+
   return (
     <TextField
       variant="outlined"
@@ -23,6 +29,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
       placeholder="Search..."
       value={searchTerm}
       onChange={(e) => setSearchTerm(e.target.value)}
+      onKeyDown={handleKeyDown}
       InputProps={{
         classes: {
           root: "py-0 text-4xl rounded-xl", // Adjust padding and font size
