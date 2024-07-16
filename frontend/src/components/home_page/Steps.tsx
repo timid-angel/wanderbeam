@@ -2,6 +2,7 @@ import mountains from "../../assets/mountain_steps.jpg";
 import hotel from "../../assets/hotel.jpg";
 import fireworks from "../../assets/fireworks.jpeg";
 import StepRow from "./StepRow";
+import { FaExternalLinkAlt } from "react-icons/fa";
 
 export type StepContent = {
   title: string;
@@ -36,13 +37,24 @@ const Steps = () => {
       <h2 className="text-[52px] text-center text-slate-900 py-2">
         Want to know how you can build your own itinerary?
       </h2>
-      <div className="flex flex-col gap-4 py-2">
+      <div className="flex flex-col gap-4 py-2 px-5">
         {cardContent.map((item, index) => (
           <StepRow
             rowContent={item}
             imagePosition={index % 2 === 1 ? "right" : "left"}
           />
         ))}
+      </div>
+      <div className="flex flex-col justify-center items-center py-5">
+        <p className="text-4xl text-slate-900">And that's it!</p>
+        <div className="relative">
+          <p className="text-2xl font-semibold text-[#0057FF]">
+            Start planning your next trip now!
+          </p>
+          <div className="absolute top-0 right-[-5%]">
+            <FaExternalLinkAlt color="#0057FF" />
+          </div>
+        </div>
       </div>
     </div>
   );
