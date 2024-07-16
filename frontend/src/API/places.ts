@@ -7,7 +7,7 @@ export interface PlaceData {
   name: string;
 }
 
-export function getPlaces(filters: FilterMap[]): PlaceData[] {
+export function getPlaces(filters: FilterMap[] | null = []): PlaceData[] {
   // Example return data matching the expected type
   if (filters != null) {
     return [{ name: "Harar" }];
