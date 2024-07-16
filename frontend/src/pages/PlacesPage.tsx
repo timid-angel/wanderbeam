@@ -49,13 +49,18 @@ const PlacesPages = () => {
       {places.length > 0 ? (
         <PlacesList places={currentPlaces} />
       ) : (
-        <EmptyIndicator text="No Result!"></EmptyIndicator>
+        <div className="my-64">
+          <EmptyIndicator text="No Result!"></EmptyIndicator>
+        </div>
       )}
-      <Pagination
-        totalPages={Math.ceil(places.length / itemsPerPage)}
-        currentPage={currentPage}
-        onPageChange={handlePageChange}
-      />
+
+      {places.length > 0 && (
+        <Pagination
+          totalPages={Math.ceil(places.length / itemsPerPage)}
+          currentPage={currentPage}
+          onPageChange={handlePageChange}
+        />
+      )}
       <Footer bg="gray-100" />
     </main>
   );
