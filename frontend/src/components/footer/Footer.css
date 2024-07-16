@@ -1,0 +1,30 @@
+footer{
+    background-color: rgb(227, 235, 255);
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+    align-items: center;
+    padding: 5px 10px 5px 60px;
+}
+
+.footer-links{
+    display: flex;
+    gap: 5px;
+}
+
+footer .logo{
+    width: 80px;
+}
+
+.socialmedia-container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: end;
+}
+
+.social-media{
+    display: flex;
+    gap: 5px;
+}
