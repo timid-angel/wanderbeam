@@ -34,7 +34,7 @@ The activities page lists various activities that can be done.
 
 ## Summary
 
-The summary page provides a summary of the information.
+The summary page provides a summary of the itinerary built by user.
 
 ![Summary](images/summary.png)
 
