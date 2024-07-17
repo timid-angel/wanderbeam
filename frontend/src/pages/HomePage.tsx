@@ -8,7 +8,7 @@ const HomePage = () => {
     <div className="flex flex-col w-full">
       <div className="max-h-full relative">
         <div className="absolute w-full">
-          <Header />
+          <Header isAuthenticated={false} />
         </div>
         <ImageSection />
       </div>
