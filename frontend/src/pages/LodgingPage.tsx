@@ -10,6 +10,7 @@ import Footer from "../components/core/Footer";
 import SearchBar from "../components/core/SearchBar";
 import Filter from "../components/core/Filter";
 import EmptyIndicator from "../components/core/EmptyIndicator";
+import { Link } from "react-router-dom";
 const LodgingPage = () => {
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [innSelected, setInnSelection] = useState(false);
@@ -299,7 +300,7 @@ const LodgingPage = () => {
           onPageChange={handlePageChange}
         />
 
-        <button className="detail-button">Choose Your Activities</button>
+        <Link to='/activities'><button className="detail-button">Choose Your Activities</button></Link>
       </div>
 
       <Footer bg="" />
