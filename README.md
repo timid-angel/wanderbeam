@@ -14,35 +14,30 @@ The home page is the main entry point to the project.
 The places page lists various places of interest.
 
 ![Places](images/places.png)
-*Description of the places page.*
 
 ## Lodging
 
 The lodging page provides information about available lodging options.
 
 ![Lodging](images/lodging.png)
-*Description of the lodging page.*
 
 ## Lodging Detail
 
 The lodging detail page gives detailed information about specific lodging options.
 
 ![Lodging Detail](images/lodging-detail.png)
-*Description of the lodging detail page.*
 
 ## Activities
 
 The activities page lists various activities that can be done.
 
 ![Activities](images/activities.png)
-*Description of the activities page.*
 
 ## Summary
 
 The summary page provides a summary of the information.
 
 ![Summary](images/summary.png)
-*Description of the summary page.*
 
 ## Conclusion
 
