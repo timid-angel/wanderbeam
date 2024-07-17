@@ -90,6 +90,7 @@ const LodgingPage = () => {
 
   const handleSearch = (value: string) => {
     setCurrent(value);
+    setCurrentPage(1);
   };
 
   const toggleFilter = () => {
@@ -113,6 +114,8 @@ const LodgingPage = () => {
     } else if (type === "retreat") {
       setRetreatSelection((prev) => !prev);
     }
+    setCurrentPage(1);
+
   };
 
   const starSelection = (star: number) => {
@@ -147,6 +150,8 @@ const LodgingPage = () => {
       setFourStar(false);
       setOneStar(false);
     }
+    setCurrentPage(1);
+
   };
 
   return (
