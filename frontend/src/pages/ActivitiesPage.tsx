@@ -217,7 +217,7 @@ const ActivitiesPage = () => {
         </div>
       </div>
 
-      <Footer />
+      <Footer bg={""} />
     </>
   );
 };
