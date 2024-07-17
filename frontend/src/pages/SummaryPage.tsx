@@ -7,7 +7,7 @@ import "../styles/tailwind.css";
 const SummaryPage: React.FC = () => {
     return (
         <>
-            <Header isAuthenticated={false} />
+            <Header isAuthenticated={true} />
             <div className="container mt-5">
                 <div className="text-center mb-5">
                     <h1 className="text-4xl font-bold">Vacation Summary</h1>
