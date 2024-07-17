@@ -164,7 +164,7 @@ const ActivitiesPage = () => {
 
   return (
     <>
-
+      <Header isAuthenticated={true} />
       <div className="activities-container">
         <div className="flex flex-col items-center mb-16">
           <div className="mt-24 max-w-2xl w-full flex justify-center items-center my-4">
