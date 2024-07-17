@@ -1,6 +1,6 @@
 # Wanderbeam
 
-Welcome to this project! This repository contains the code and resources for the project. Below are the details and screenshots of various pages included in the project.
+Welcome! This repository contains the code and resources for WanderBeam, a travel planning platform. Below are the details and screenshots of various pages included in the project.
 
 ## Home
 
@@ -39,4 +39,4 @@ The summary page provides a summary of the itinerary built by the user.
 ![Summary](images/summary.png)
 
 
-Thank you for exploring the project! For more details, please refer to the documentation or contact the project maintainers.
+Thank you for exploring the project! For more details, please contact the project maintainers.
