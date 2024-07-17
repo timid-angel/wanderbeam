@@ -38,6 +38,5 @@ The summary page provides a summary of the information.
 
 ![Summary](images/summary.png)
 
-## Conclusion
 
 Thank you for exploring the project! For more details, please refer to the documentation or contact the project maintainers.
