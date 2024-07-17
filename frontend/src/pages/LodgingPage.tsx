@@ -7,7 +7,7 @@ import PaginationComponent from "../components/core/PaginationComponent";
 import lodgingInfos from "../data/lodgingData";
 import Header from "../components/core/Header";
 import Footer from "../components/core/Footer";
-import SearchComponent from "../components/core/SearchBar";
+import SearchBar from "../components/core/SearchBar";
 import Filter from "../components/core/Filter";
 import EmptyIndicator from "../components/core/EmptyIndicator";
 const LodgingPage = () => {
@@ -152,7 +152,11 @@ const LodgingPage = () => {
     <div className="min-h-screen flex flex-col">
       <Header isAuthenticated={true} />
       <div className="lodging-container flex-grow flex flex-col">
-        <SearchComponent onSearch={handleSearch} />
+        <div className="flex flex-col items-center mb-16">
+          <div className="mt-24 max-w-2xl w-full flex justify-center items-center my-4">
+            <SearchBar onSearch={handleSearch} />
+          </div>
+        </div>
         <Filter onClick={toggleFilter} />
         {showFiter && (
           <div className="chips">
