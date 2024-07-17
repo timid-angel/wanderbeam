@@ -9,7 +9,11 @@ const StyledButton = styled(Button)(`
   font-size: 16px;
 `);
 
-const HeaderButtons = () => {
+interface HeaderButtonsProp {
+  isAuthenticated: boolean;
+}
+
+const HeaderButtons: React.FC<HeaderButtonsProp> = ({ isAuthenticated }) => {
   const navigate = useNavigate();
 
   const goToHistory = () => {
@@ -21,8 +25,12 @@ const HeaderButtons = () => {
       <StyledButton variant="text" onClick={goToHistory}>
         History
       </StyledButton>
-      <StyledButton variant="text">Login</StyledButton>
-      <Button variant="contained">Signup</Button>
+      {!isAuthenticated && (
+        <>
+          <StyledButton variant="text">Login</StyledButton>
+          <Button variant="contained">Signup</Button>
+        </>
+      )}
       <div className="h-fit">
         <FormControl sx={{ m: 1 }} size="small">
           <Select

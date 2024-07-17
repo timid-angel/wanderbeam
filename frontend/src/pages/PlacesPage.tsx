@@ -42,7 +42,7 @@ const PlacesPages = () => {
 
   return (
     <main className="flex flex-col items-center gap-24">
-      <Header />
+      <Header isAuthenticated={true} />
       <div className="mt-24 max-w-2xl w-full flex justify-center items-center my-4">
         <SearchBar onSearch={handleSearch} />
       </div>

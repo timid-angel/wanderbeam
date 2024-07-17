@@ -150,7 +150,7 @@ const LodgingPage = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <Header />
+      <Header isAuthenticated={true} />
       <div className="lodging-container flex-grow flex flex-col">
         <SearchComponent onSearch={handleSearch} />
         <Filter onClick={toggleFilter} />
@@ -298,7 +298,7 @@ const LodgingPage = () => {
         <button className="detail-button">Choose Your Activities</button>
       </div>
 
-      <Footer />
+      <Footer bg="" />
     </div>
   );
 };

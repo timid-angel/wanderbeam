@@ -162,7 +162,7 @@ const ActivitiesPage = () => {
 
   return (
     <>
-      <Header />
+      <Header isAuthenticated={true} />
 
       <div className="activities-container">
         <SearchBar onSearch={handleSearch} />
@@ -210,7 +210,15 @@ const ActivitiesPage = () => {
           onPageChange={handlePageChange}
         />
 
-        <div style={{ display: "flex", justifyContent: "center", marginTop: "20px", marginRight:"60px" , marginBottom :"30px"}}>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            marginTop: "20px",
+            marginRight: "60px",
+            marginBottom: "30px",
+          }}
+        >
           <Button variant="contained" color="primary">
             Summary
           </Button>

@@ -3,6 +3,7 @@ import hotel from "../../assets/hotel.jpg";
 import fireworks from "../../assets/fireworks.jpeg";
 import StepRow from "./StepRow";
 import { FaExternalLinkAlt } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 export type StepContent = {
   title: string;
@@ -32,6 +33,8 @@ const cardContent: StepContent[] = [
 ];
 
 const Steps = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="flex flex-col py-4">
       <h2 className="text-[52px] text-center text-slate-900 py-2">
@@ -47,7 +50,12 @@ const Steps = () => {
       </div>
       <div className="flex flex-col justify-center items-center py-5">
         <p className="text-4xl text-slate-900">And that's it!</p>
-        <div className="relative">
+        <div
+          onClick={() => {
+            navigate("/places");
+          }}
+          className="relative cursor-pointer"
+        >
           <p className="text-2xl font-semibold text-[#0057FF]">
             Start planning your next trip now!
           </p>

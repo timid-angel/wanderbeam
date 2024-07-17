@@ -7,8 +7,8 @@ const HomePage = () => {
   return (
     <div className="flex flex-col w-full">
       <div className="max-h-full relative">
-        <div className="absolute w-full">
-          <Header />
+        <div className="absolute w-full bg-gray-50 bg-opacity-10">
+          <Header isAuthenticated={false} />
         </div>
         <ImageSection />
       </div>

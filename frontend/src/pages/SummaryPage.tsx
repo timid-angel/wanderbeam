@@ -1,17 +1,13 @@
-
-
-import React from 'react';
-import '../styles/Summary.css';
-import Header from '../components/Header';
-import Footer from '../components/core/Footer';
-import "../styles/tailwind.css"
-
-
+import React from "react";
+import "../styles/Summary.css";
+import Header from "../components/core/Header";
+import Footer from "../components/core/Footer";
+import "../styles/tailwind.css";
 
 const SummaryPage: React.FC = () => {
     return (
         <>
-            <Header />
+            <Header isAuthenticated={false} />
             <div className="container mt-5">
                 <div className="text-center mb-5">
                     <h1 className="text-4xl font-bold">Vacation Summary</h1>

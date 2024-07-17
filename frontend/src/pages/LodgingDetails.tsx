@@ -23,7 +23,7 @@ const LodgingDetails: React.FC = () => {
   return (
     <>
       <div className="absolute w-full">
-        <Header />
+        <Header isAuthenticated={true} />
       </div>
       <div className="max-h-screen w-full">
         <img
@@ -35,7 +35,6 @@ const LodgingDetails: React.FC = () => {
           <p className="text-[40px] italic font-semibold text-slate-50 text-black detail-title">
             {lodge.name}
           </p>
-          
         </div>
       </div>
       <div className="about">
@@ -84,12 +83,10 @@ const LodgingDetails: React.FC = () => {
         </div>
 
         <p>
-          <span>Contact : </span>(123) 456-7890, email@example.com
+          <span>Contact: </span>(123) 456-7890, email@example.com
         </p>
         <span>Website : </span>
-        <a href="Website: www.continentalhotel.com">
-           www.continentalhotel.com
-        </a>
+        <a href="Website: www.continentalhotel.com">www.continentalhotel.com</a>
         <p>
           <span>Location</span> : {lodge.location}
         </p>
@@ -120,7 +117,7 @@ const LodgingDetails: React.FC = () => {
           </div>
         </div>
       </div>
-      <Footer/>
+      <Footer bg="" />
     </>
   );
 };
