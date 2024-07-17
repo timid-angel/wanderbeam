@@ -7,7 +7,6 @@ Welcome to this project! This repository contains the code and resources for the
 The home page is the main entry point to the project.
 
 ![Home](images/home.png)
-*Description of the home page.*
 
 ## Places
 
