@@ -14,20 +14,17 @@ export type StepContent = {
 const cardContent: StepContent[] = [
   {
     title: "Choose your destination",
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dapibus tortor in dolor lacinia, in cursus sem sollicitudin. Ut massa dui, fermentum a maximus non.",
+    content: "Choosing your destination is the first step to planning your perfect trip. Whether you're dreaming of a tropical beach, a bustling city, or a quiet countryside, your destination sets the tone for your adventure. Consider factors like climate, culture, and activities available when making your decision.",
     image: mountains,
   },
   {
     title: "Choose where you'll stay",
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dapibus tortor in dolor lacinia, in cursus sem sollicitudin. Ut massa dui, fermentum a maximus non.",
+    content: "Where you stay can significantly impact your travel experience. From luxurious hotels to cozy lodges and budget-friendly hostels, the choice of accommodation should match your preferences and budget. Look for places that offer the amenities you need and are conveniently located to the attractions you want to visit.",
     image: hotel,
   },
   {
     title: "Choose what you'll do",
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dapibus tortor in dolor lacinia, in cursus sem sollicitudin. Ut massa dui, fermentum a maximus non.",
+    content: "Decide on the activities and attractions you want to include in your itinerary. Whether it's sightseeing, outdoor adventures, cultural experiences, or relaxation, planning what you'll do in advance ensures you make the most of your time. Consider booking tours or activities in advance to avoid missing out.",
     image: fireworks,
   },
 ];

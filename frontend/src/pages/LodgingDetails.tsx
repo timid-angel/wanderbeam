@@ -86,7 +86,7 @@ const LodgingDetails: React.FC = () => {
           <span>Contact: </span>(123) 456-7890, email@example.com
         </p>
         <span>Website : </span>
-        <a href="Website: www.continentalhotel.com">www.continentalhotel.com</a>
+        <a href={`Website: www.${lodge.category}.com`}>www.continentalhotel.com</a>
         <p>
           <span>Location</span> : {lodge.location}
         </p>
