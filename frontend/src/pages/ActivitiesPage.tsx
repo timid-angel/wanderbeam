@@ -7,6 +7,7 @@ import ActivityCard from "../components/activities/ActivityCard";
 import PaginationComponent from "../components/core/PaginationComponent";
 import Filter from "../components/core/Filter";
 import "../styles/ActivitiesPage.css";
+import { useNavigate } from "react-router-dom";
 const activitiesData = [
   {
     name: "Swimming at the Beach",
@@ -95,6 +96,7 @@ const activitiesData = [
 ];
 
 const ActivitiesPage = () => {
+  const navigate = useNavigate();
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [current, setCurrent] = useState("");
   const [showFilter, setFilter] = useState(false);
@@ -165,7 +167,11 @@ const ActivitiesPage = () => {
       <Header isAuthenticated={true} />
 
       <div className="activities-container">
-        <SearchBar onSearch={handleSearch} />
+        <div className="flex flex-col items-center mb-16">
+          <div className="mt-24 max-w-2xl w-full flex justify-center items-center my-4">
+            <SearchBar onSearch={handleSearch} />
+          </div>
+        </div>
         <Filter onClick={toggleFilter} />
 
         {showFilter && (
@@ -219,7 +225,13 @@ const ActivitiesPage = () => {
             marginBottom: "30px",
           }}
         >
-          <Button variant="contained" color="primary">
+          <Button
+            variant="contained"
+            color="primary"
+            onClick={() => {
+              navigate("/summary");
+            }}
+          >
             Summary
           </Button>
         </div>

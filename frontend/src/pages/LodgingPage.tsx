@@ -10,7 +10,11 @@ import Footer from "../components/core/Footer";
 import SearchBar from "../components/core/SearchBar";
 import Filter from "../components/core/Filter";
 import EmptyIndicator from "../components/core/EmptyIndicator";
+import { useNavigate } from "react-router-dom";
+
 const LodgingPage = () => {
+  const navigate = useNavigate();
+
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [innSelected, setInnSelection] = useState(false);
   const [resortSelected, setResortSelection] = useState(false);
@@ -299,7 +303,14 @@ const LodgingPage = () => {
           onPageChange={handlePageChange}
         />
 
-        <button className="detail-button">Choose Your Activities</button>
+        <button
+          onClick={() => {
+            navigate("/activities");
+          }}
+          className="detail-button"
+        >
+          Choose Your Activities
+        </button>
       </div>
 
       <Footer bg="" />
