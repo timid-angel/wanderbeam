@@ -14,7 +14,7 @@ interface LodgingCardProps {
   image: any
 }
 
-const LodgingCard: React.FC<LodgingCardProps> = (props) => {
+const LodgingCard = (props: LodgingCardProps) => {
   return (
     <Link to={`/lodging/${props.name}`}><div className="lodging-card">
       <img src={props.image} alt="hotel" />

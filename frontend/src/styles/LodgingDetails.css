@@ -5,11 +5,15 @@
     margin: 10px;
 }
 .about, .amenties{
-    width: 50%;
+    width: 60%;
     margin: 50px auto;
     box-shadow: 0 4px 8px rgba(1, 1, 1, 0.2);
     padding: 20px 30px;
 
+}
+
+.amenties{
+    width: 30%;
 }
 
 .about-rating{
@@ -25,7 +29,8 @@
 .amenties .each{
     display: flex;
     flex-wrap: wrap;
-    gap: 50px;
+    margin-top: 50px;
+    gap: 40px;
     padding: 30px;
     justify-content: center;
     
@@ -37,6 +42,7 @@
 }
 
 .amenties .each div{
+    width: 150px;
     display: flex;
     align-items: center;
     gap: 20px;
@@ -51,7 +57,7 @@
 }
 
 .amenties .each  img{
-    width: 40px;
+    width: 20px;
 }
 
 .about a{
